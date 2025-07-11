@@ -1,0 +1,83 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  position: relative;
+  color: $colorBlack;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 5px 48px;
+  border-radius: 24px;
+  font-variant-ligatures: none;
+  font-family: $fontMain;
+  width: 100%;
+  height: 87px;
+
+  @include responsive1549 {
+    font-size: 20px;
+    height: 75px;
+  }
+
+  @include responsive1199 {
+    padding: 5px 40px;
+    height: 70px;
+  }
+
+  @include responsive1023 {
+    font-size: 16px;
+    height: 60px;
+    padding: 5px 35px;
+  }
+
+  @include responsive767 {
+  }
+
+  &--orange {
+    @include hover {
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// .btn-download {
+//   font-size: 16px;
+//   font-family: $fontMain;
+//   height: 50px;
+//   border-radius: 12px;
+//   display: flex;
+//   justify-content: center;
+//   gap: 12px;
+//   background-color: $colorBlack-a2;
+//   border-color: transparent;
+//   padding: 0 20px;
+
+//   @include hover {
+//     background-color: $colorOrange;
+//     color: $colorWhite;
+//   }
+
+//   @include before {
+//     position: relative;
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.66669 18.3337H18.3334M10 12.0837V1.66699M10 12.0837L14.1667 7.91699M10 12.0837L5.83335 7.91699' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+//     background-position: left center;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 16px;
+//     height: 16px;
+//   }
+// }

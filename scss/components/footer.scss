@@ -1,0 +1,338 @@
+.footer {
+  background-color: #3a3a3a;
+  color: $colorWhite;
+  padding-top: 50px;
+
+  @include responsive767 {
+    padding-top: 32px;
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    justify-content: space-between;
+
+    @include responsive1549 {
+      gap: 40px 0;
+    }
+
+    @include responsive767 {
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    width: 200px;
+    height: 55px;
+
+    @include responsive1199 {
+      width: 155px;
+      height: 42px;
+      margin: 0;
+    }
+  }
+
+  .footer-col {
+    &--menu {
+      display: flex;
+      gap: 94px;
+
+      @include responsive1549 {
+        gap: 40px;
+      }
+
+      @include responsive1023 {
+        gap: 60px;
+      }
+
+      @include responsive767 {
+        gap: 40px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    &--data {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      .footer-mail {
+        @include responsive1023 {
+          display: flex;
+        }
+      }
+
+      .footer-phone {
+        @include responsive1023 {
+          display: flex;
+        }
+      }
+    }
+
+    &--markets {
+      @include responsive1023 {
+        width: 100%;
+      }
+    }
+
+    .copyRight {
+      margin-top: 24px;
+
+      @include responsive767 {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include responsive1199 {
+      max-width: 150px;
+    }
+  }
+
+  .footer-link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    @include text-decoration-hover($colorWhite);
+
+    @include responsive1549 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &.footer-title {
+      font-weight: 600;
+    }
+  }
+
+  .footer-phone {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s;
+
+    @include responsive1549 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='23' viewBox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.68 15.9324C21.04 15.9324 19.4533 15.688 17.9733 15.248C17.5067 15.1013 16.9867 15.2113 16.6267 15.5413L14.5333 17.9491C10.76 16.2991 7.22667 13.1824 5.34667 9.60129L7.94667 7.5724C8.30667 7.23018 8.41333 6.75351 8.26667 6.32573C7.77333 4.96907 7.52 3.51462 7.52 2.01129C7.52 1.35129 6.92 0.801289 6.2 0.801289H1.58667C0.866667 0.801289 0 1.09462 0 2.01129C0 13.3657 10.3067 22.8013 22.68 22.8013C23.6267 22.8013 24 22.0313 24 21.3591V17.1424C24 16.4824 23.4 15.9324 22.68 15.9324Z' fill='white'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 16px;
+      position: relative;
+      background-size: contain;
+    }
+
+    @include hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .footer-mail {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s;
+
+    @include responsive1549 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      display: none;
+    }
+
+    @include before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z' fill='%23F5F5F5'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 16px;
+      position: relative;
+      background-size: contain;
+    }
+
+    @include hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .picture-block {
+  }
+
+  .social {
+    display: flex;
+  }
+
+  .copyRight {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    grid-column: 1 / 3;
+  }
+
+  .header-markets {
+    position: relative;
+    bottom: auto;
+    top: 0;
+
+    @include responsive1023 {
+      display: flex !important;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .header-markets__link {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 18px 0;
+  border-top: solid 1px $colorWhite-a3;
+  margin-top: 30px;
+
+  @include responsive767 {
+    margin-top: 18px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 70px;
+    align-items: center;
+    gap: 16px;
+
+    @include responsive767 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+.develop {
+  grid-column: 3/3;
+  grid-row: 2/3;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: auto;
+  margin-left: auto;
+
+  @include responsive1199 {
+  }
+
+  @include responsive767 {
+    margin: 30px auto 0;
+    font-size: 12px;
+  }
+
+  .develop__title {
+    font-size: 16px;
+    line-height: 24px;
+
+    @include responsive1199 {
+      font-size: 12px;
+    }
+  }
+
+  .develop__link {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='66' height='20' viewBox='0 0 66 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.4063 0H0V19.661H2.75V11.3559H10.6562L12.7188 9.32203V8.30509H2.75V2.88136H13.4063V0Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.8516 20C23.696 20 26.8125 17.0405 26.8125 13.3898C26.8125 9.73914 23.696 6.77966 19.8516 6.77966C16.0071 6.77966 12.8906 9.73914 12.8906 13.3898C12.8906 17.0405 16.0071 20 19.8516 20ZM19.8516 17.6271C22.2721 17.6271 24.2344 15.73 24.2344 13.3898C24.2344 11.0496 22.2721 9.15254 19.8516 9.15254C17.431 9.15254 15.4688 11.0496 15.4688 13.3898C15.4688 15.73 17.431 17.6271 19.8516 17.6271Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M59.0391 20C62.8835 20 66 17.0405 66 13.3898C66 9.73914 62.8835 6.77966 59.0391 6.77966C55.1946 6.77966 52.0781 9.73914 52.0781 13.3898C52.0781 17.0405 55.1946 20 59.0391 20ZM59.0391 17.6271C61.4596 17.6271 63.4219 15.73 63.4219 13.3898C63.4219 11.0496 61.4596 9.15254 59.0391 9.15254C56.6185 9.15254 54.6563 11.0496 54.6563 13.3898C54.6563 15.73 56.6185 17.6271 59.0391 17.6271Z' fill='white'/%3e%3cpath d='M31.625 7.11864H28.875V17.7966L30.7656 19.661H40.2188V7.11864H37.125V16.9492H31.625V7.11864Z' fill='white'/%3e%3cpath d='M46.0625 7.11864H43.1406V19.661H46.0625V11.6949L50.0156 9.49153H52.0781V7.11864H48.9844L46.0625 8.81356V7.11864Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .develop__desc {
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+}
+
+.footer-bottom__links {
+  grid-column: 1/3;
+  grid-row: 2/2;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 0;
+  max-width: 1200px;
+
+  @include responsive1439 {
+    grid-template-columns: 1fr 1fr;
+    max-width: 650px;
+    gap: 10px 0;
+  }
+
+  @include responsive767 {
+    grid-template-columns: 1fr;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: text-decoration 0.3s;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}

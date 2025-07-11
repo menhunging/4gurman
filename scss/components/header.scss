@@ -1,0 +1,504 @@
+.header {
+  background-color: $colorBlack;
+  color: $colorWhite;
+  padding: 18px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-link-animals {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @include responsive767 {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 18px);
+    flex-direction: column;
+  }
+
+  .header-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    @include hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .header-link--cat {
+    color: $colorRed;
+
+    @include before {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("/img/svg/cat.svg");
+      background-size: contain;
+    }
+  }
+
+  .header-link--dog {
+    @include before {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("/img/svg/dog.svg");
+      background-size: contain;
+    }
+  }
+}
+
+.logo {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+  width: 116px;
+  height: 32px;
+  @include invisLink;
+  margin: 0 auto;
+
+  @include responsive1199 {
+  }
+
+  @include responsive767 {
+    margin-left: auto;
+    margin-right: 0;
+    width: 95px;
+    height: 26px;
+  }
+
+  &:hover {
+    @include hover {
+      transform: scale(0.95);
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.search-block {
+  @include responsive767 {
+    display: none;
+  }
+
+  .search-block__icon {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M23 22.8013L15.6668 15.468M18.1111 9.35684C18.1111 14.0819 14.2807 17.9124 9.55556 17.9124C4.83045 17.9124 1 14.0819 1 9.35684C1 4.63174 4.83045 0.801289 9.55556 0.801289C14.2807 0.801289 18.1111 4.63174 18.1111 9.35684Z' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    transition: transform 0.3s;
+
+    @include responsive1199 {
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+    }
+
+    @include hover {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.header-phone-link {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.3s;
+
+  @include responsive1199 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include responsive767 {
+    display: none;
+  }
+
+  @include before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='23' viewBox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.68 15.9324C21.04 15.9324 19.4533 15.688 17.9733 15.248C17.5067 15.1013 16.9867 15.2113 16.6267 15.5413L14.5333 17.9491C10.76 16.2991 7.22667 13.1824 5.34667 9.60129L7.94667 7.5724C8.30667 7.23018 8.41333 6.75351 8.26667 6.32573C7.77333 4.96907 7.52 3.51462 7.52 2.01129C7.52 1.35129 6.92 0.801289 6.2 0.801289H1.58667C0.866667 0.801289 0 1.09462 0 2.01129C0 13.3657 10.3067 22.8013 22.68 22.8013C23.6267 22.8013 24 22.0313 24 21.3591V17.1424C24 16.4824 23.4 15.9324 22.68 15.9324Z' fill='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 22px;
+    position: relative;
+
+    @include responsive1199 {
+      width: 20px;
+      height: 18px;
+      background-size: contain;
+    }
+  }
+
+  @include hover {
+    transform: scale(0.95);
+  }
+}
+
+.header-mail-link {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z' fill='white'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 16px;
+  transition: transform 0.3s;
+
+  @include responsive767 {
+    display: none;
+  }
+
+  @include hover {
+    transform: scale(0.95);
+  }
+}
+
+.header-markets {
+  display: none;
+  align-items: center;
+  gap: 17px;
+  position: absolute;
+  top: calc(100% + 25px);
+  right: 0;
+
+  .header-markets__link {
+    position: relative;
+
+    @include hover {
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    @include before {
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $colorWhite;
+      transition: opacity 0.3s;
+    }
+  }
+
+  .picture-block {
+    position: relative;
+    min-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    picture {
+      position: relative;
+
+      img {
+        position: relative;
+      }
+    }
+  }
+}
+
+.menu-invis {
+  width: 100%;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  background-color: $colorWhite;
+  z-index: 9;
+  padding: 36px 0 70px;
+  transition: top 0.3s;
+  border-bottom-right-radius: 200px;
+
+  @include responsive1549 {
+    border-bottom-right-radius: 140px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+
+  @include responsive1023 {
+    border-bottom-right-radius: 100px;
+    padding-top: 20px;
+  }
+
+  @include responsive767 {
+    border-bottom-right-radius: 70px;
+  }
+
+  &.opened {
+    top: 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .menu-invis__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+
+    @include responsive1549 {
+      font-size: 32px;
+      line-height: 34px;
+    }
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  .menu-invis__content {
+    display: flex;
+    gap: 0 80px;
+    margin-top: 60px;
+
+    @include responsive1549 {
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    @include responsive1199 {
+      margin-top: 24px;
+    }
+
+    @include responsive767 {
+      flex-wrap: wrap;
+    }
+
+    @include responsive389 {
+      gap: 40px 20px;
+    }
+  }
+
+  .menu-invis__ul {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 300px;
+    border-right: solid 2px #525151;
+    color: #525151;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+      width: 200px;
+      gap: 12px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      width: 150px;
+    }
+
+    @include responsive389 {
+      width: 135px;
+    }
+
+    & + .menu-invis__ul {
+      border-right: 0;
+      width: 250px;
+
+      @include responsive1549 {
+        width: 300px;
+      }
+
+      @include responsive767 {
+        width: 150px;
+      }
+
+      @include responsive389 {
+        width: 135px;
+      }
+    }
+
+    .active {
+      font-weight: 600;
+      color: $colorBlack;
+    }
+
+    a {
+      transition: border 0.3s;
+      border-bottom: solid 2px transparent;
+
+      @include hover {
+        border-color: $colorRed;
+      }
+
+      &.active {
+        border-color: $colorRed;
+      }
+    }
+  }
+
+  .header-markets {
+    position: relative;
+    display: none;
+
+    @include responsive767 {
+      display: flex !important;
+      position: relative;
+      top: auto;
+      right: auto;
+      width: 100%;
+    }
+
+    .header-markets__link::before {
+      background-color: #525151;
+    }
+  }
+
+  .menu-invis__media {
+    position: absolute;
+    bottom: -186px;
+    right: 0;
+    width: 761px;
+    height: 554px;
+    pointer-events: none;
+
+    @include responsive1549 {
+      width: 513px;
+      height: 375px;
+      bottom: -148px;
+    }
+
+    @include responsive1199 {
+      width: 440px;
+      height: 321px;
+      bottom: -117px;
+    }
+
+    @include responsive1023 {
+      width: 420px;
+      height: 236px;
+      bottom: -99px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      bottom: auto;
+      width: 253px;
+      height: 183px;
+      margin-left: 20px;
+      margin-top: 15px;
+      margin-bottom: -88px;
+    }
+
+    img {
+      @include responsive1023 {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 1L1 11M1 1L11 11' stroke='%233A3A3A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+    transition: transform 0.3s;
+
+    @include responsive1549 {
+      top: 12px;
+    }
+
+    @include responsive1199 {
+      top: 8px;
+    }
+
+    @include before {
+      width: 200%;
+      height: 200%;
+      border: solid 1px $colorBlack;
+      left: -50%;
+      top: -50%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.5s, transform 1s;
+    }
+
+    @include hover {
+      transform: scale(2);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

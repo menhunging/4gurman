@@ -1,0 +1,267 @@
+.grettings-main {
+  background-color: $colorBlack;
+  border-bottom-right-radius: 200px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+
+  @include responsive1549 {
+    border-bottom-right-radius: 140px;
+  }
+
+  @include responsive1023 {
+    border-bottom-right-radius: 100px;
+  }
+
+  @include responsive767 {
+    border-bottom-right-radius: 70px;
+  }
+
+  @include before {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.grettingsSlider {
+  position: relative;
+  margin-bottom: -3px;
+
+  .swiper-wrapper {
+  }
+
+  .swiper-slide {
+    position: relative;
+    min-height: 844px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 72px;
+    overflow: hidden;
+
+    @include before {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @include responsive1549 {
+      min-height: 570px;
+      padding-bottom: 110px;
+    }
+
+    @include responsive1199 {
+      padding-bottom: 80px;
+      min-height: 460px;
+    }
+
+    @include responsive767 {
+      min-height: 335px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    left: calc(50% - 660px);
+    bottom: -5px;
+    width: 1560px;
+    height: 844px;
+    z-index: -1;
+
+    @include responsive1549 {
+      width: 1200px;
+      height: 650px;
+      left: calc(50% - 460px);
+    }
+
+    @include responsive1199 {
+      width: 1049px;
+      height: 510px;
+      left: calc(50% - 430px);
+      bottom: 0px;
+    }
+
+    @include responsive767 {
+      width: 490px;
+      height: 260px;
+      left: calc(50% - 210px);
+      bottom: 0px;
+    }
+
+    picture {
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .swiper-controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: $colorWhite;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 55px);
+    z-index: 3;
+
+    @include responsive1199 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      width: 75px;
+    }
+  }
+
+  .swiperBtnPrev {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='38' height='30' viewBox='0 0 38 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M36 27.8954V14.8954H2M2 14.8954L15.4463 1.89536M2 14.8954L15.4463 27.8954' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  }
+
+  .swiperBtnNext {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='30' viewBox='0 0 37 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 28.0345V14.8954H35M35 14.8954L21.9492 1.7562M35 14.8954L21.9492 28.0345' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  }
+
+  .swiper-pagination {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .grettings-main__fraction {
+    width: 100%;
+
+    @include responsive767 {
+      display: none;
+    }
+  }
+
+  .swiper-pagination {
+    gap: 24px;
+    bottom: 24px !important;
+
+    @include responsive767 {
+      gap: 8px;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    height: 3px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+    @include responsive767 {
+      height: 2px;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: $colorWhite-a5;
+      max-width: 160px;
+      border-radius: 30px;
+      overflow: auto;
+      height: 3px;
+
+      @include responsive1549 {
+        max-width: 120px;
+      }
+
+      @include responsive767 {
+        max-width: 40px;
+        height: 2px;
+      }
+
+      @include before {
+        width: 0%;
+        height: 100%;
+        background-color: $colorWhite;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+
+      &.swiper-pagination-bullet-active {
+        &::before {
+          transition: width 3s;
+          opacity: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.grettings__content {
+  .caption {
+    font-family: $fontSuisse;
+    color: $colorWhite;
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 65px;
+    position: relative;
+
+    @include responsive1549 {
+      font-size: 90px;
+      line-height: 100px;
+    }
+
+    @include responsive1199 {
+      font-size: 80px;
+      line-height: 90px;
+      gap: 10px 30px;
+      letter-spacing: -0.01em;
+    }
+
+    @include responsive1023 {
+      font-size: 65px;
+      line-height: 75px;
+    }
+
+    @include responsive767 {
+      font-size: 30px;
+      line-height: 40px;
+      gap: 0 20px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    span {
+      &:nth-child(1) {
+        width: 100%;
+      }
+
+      &:nth-child(2) {
+        margin-left: auto;
+
+        @include responsive1199 {
+        }
+      }
+    }
+  }
+}

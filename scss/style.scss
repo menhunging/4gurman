@@ -1,0 +1,20 @@
+@import "./shared/values";
+@import "./shared/mixins";
+@import "./shared/reset";
+
+@import "base";
+
+// components
+@import "./components/btns";
+@import "./components/captions";
+@import "./components/modals";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/burger";
+
+// HOME PAGE
+@import "blocks/home-page/grettings-main.scss";
+@import "blocks/home-page/gallery-main.scss";
+
+// BLOCKS
+@import "blocks";
