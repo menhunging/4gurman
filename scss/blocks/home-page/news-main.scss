@@ -1,0 +1,251 @@
+.news-main {
+  overflow: hidden;
+
+  .news-list {
+  }
+
+  .title-section {
+    align-items: flex-end;
+  }
+
+  .swiper-controls-simple {
+    position: absolute;
+    left: calc(100% + 200px);
+    bottom: 60px;
+    right: auto;
+    top: auto;
+    width: 150px;
+
+    @include responsive1549 {
+      left: calc(100% + 250px);
+    }
+
+    @include responsive1023 {
+      left: calc(100% + 140px);
+    }
+
+    @include responsive767 {
+      position: relative;
+      left: auto;
+      top: auto;
+      bottom: auto;
+      margin-top: 24px;
+    }
+
+    .swiperBtnPrev {
+    }
+
+    .swiperBtnNext {
+    }
+  }
+}
+
+.news-item {
+}
+
+.news-item__content {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 24px;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s;
+
+  @include responsive1549 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  @include responsive1439 {
+    font-size: 28px;
+    line-height: 32px;
+    gap: 16px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 20px;
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .news-item__date {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    transition: ease-out 0.3s;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  p {
+    width: 868px;
+    transition: ease-out 0.3s;
+
+    @include responsive1549 {
+      width: 100%;
+    }
+
+    @include responsive1439 {
+      width: 551px;
+    }
+
+    @include responsive1199 {
+      width: 438px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+    }
+  }
+
+  .news-item__link {
+    transition: ease-out 0.3s;
+  }
+}
+
+.news-slider {
+  width: 760px;
+  overflow: visible;
+  margin: 0;
+  margin-top: 24px;
+
+  @include responsive1549 {
+    width: 691px;
+  }
+
+  @include responsive1439 {
+    width: 530px;
+  }
+
+  @include responsive1199 {
+    width: 440px;
+  }
+
+  @include responsive767 {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    overflow: visible;
+    transition: all 0.3s;
+  }
+
+  .swiper-slide-active {
+    .news-item__content {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .swiper-slide-next {
+    .picture-block {
+      width: 446px;
+      height: 445px;
+
+      @include responsive1549 {
+        width: 390px;
+        height: 389px;
+      }
+
+      @include responsive1439 {
+        width: 299px;
+        height: 298px;
+      }
+
+      @include responsive767 {
+        height: auto;
+        padding-top: calc(194 / 316 * 100%);
+      }
+    }
+
+    & + .swiper-slide {
+      transform: translateX(-316px);
+
+      .picture-block {
+        width: 359px;
+        height: 327px;
+
+        @include responsive1549 {
+          width: 314px;
+          height: 286px;
+        }
+
+        @include responsive1439 {
+          width: 241px;
+          height: 219px;
+          transform: translateX(83px);
+        }
+
+        @include responsive1199 {
+          width: 241px;
+          height: 219px;
+          transform: translateX(175px);
+        }
+
+        @include responsive767 {
+          height: auto;
+          padding-top: calc(194 / 316 * 100%);
+        }
+      }
+    }
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 509px;
+    overflow: hidden;
+    border-bottom-right-radius: 200px;
+    @include invisLink;
+    transition: all 0.3s;
+
+    @include responsive1439 {
+      height: 354px;
+    }
+
+    @include responsive1199 {
+      border-bottom-right-radius: 120px;
+    }
+
+    @include responsive767 {
+      padding-top: calc(215 / 316 * 100%);
+      height: auto;
+      border-bottom-right-radius: 80px;
+    }
+
+    img {
+      transition: all 0.3s;
+    }
+
+    @include hover {
+      border-bottom-right-radius: 0;
+
+      img {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

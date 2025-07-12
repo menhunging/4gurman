@@ -12,7 +12,7 @@ $(document).ready(function () {
       } else {
         burger.addClass("opened");
         menu.addClass("opened");
-        body.addClass("is-openMenu");
+        body.addClass("hidden");
         overlay.addClass("visible");
       }
     });
@@ -28,7 +28,7 @@ $(document).ready(function () {
     function closeMenu() {
       burger.removeClass("opened");
       menu.removeClass("opened");
-      body.removeClass("is-openMenu");
+      body.removeClass("hidden");
       overlay.removeClass("visible");
     }
   }
@@ -60,6 +60,73 @@ $(document).ready(function () {
         input.val("");
         btnClearInput.removeClass("visible");
       }
+    });
+  }
+
+  if ($(".paws").length > 0) {
+    let paws = $(".paws .paw");
+    let currentIndex = 0;
+
+    setInterval(function () {
+      paws.eq(currentIndex).addClass("active");
+      currentIndex = currentIndex + 1;
+
+      if (currentIndex > paws.length) {
+        paws.removeClass("active");
+        currentIndex = 0;
+      }
+    }, 500);
+  }
+
+  if ($("[data-fancybox]").length > 0) {
+    Fancybox.bind("[data-fancybox]", {
+      speedIn: 600,
+      speedOut: 600,
+    });
+  }
+
+  if ($(".phone-input").length > 0) {
+    $(".phone-input").map(function () {
+      $(this).inputmask({
+        mask: "+7(999) 999-99-99",
+        placeholder: "*",
+        showMaskOnHover: false,
+        showMaskOnFocus: true,
+        clearIncomplete: true,
+      });
+    });
+  }
+
+  if ($(".thisYear").length > 0) {
+    let date = new Date();
+    $(".thisYear").text(date.getFullYear());
+  }
+
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-modal",
+
+      onShow: () => {
+        $("body").addClass("modal-open");
+      },
+
+      onClose: () => {
+        $("body").removeClass("modal-open");
+      },
+    });
+
+    $("[data-modal]").map(function () {
+      $(this).click((e) => e.preventDefault());
+    });
+  }
+
+  if ($("[data-btn-disabled]").length > 0) {
+    $("[data-btn-disabled]").on("click", function () {
+      const formBlock = $(this).parents("form");
+      const btn = formBlock.find("[data-for-disabled]");
+      const isDisabled = btn.prop("disabled");
+
+      btn.prop("disabled", !isDisabled);
     });
   }
 
@@ -105,6 +172,117 @@ $(document).ready(function () {
     swiper.on("slideChange", updateFraction);
   }
 
+  if ($(".teams-slider").length > 0) {
+    const swiper = new Swiper(".teams-slider", {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      navigation: {
+        prevEl: ".teams-slider .swiperBtnPrev",
+        nextEl: ".teams-slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.35,
+          spaceBetween: 18,
+        },
+        390: {
+          slidesPerView: 1.65,
+          spaceBetween: 18,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 18,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }
+
+  if ($(".news-slider").length > 0) {
+    const swiper = new Swiper(".news-slider", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".news-slider .swiperBtnPrev",
+        nextEl: ".news-slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.15,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 1,
+          spaceBetween: 22,
+        },
+        1440: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  if ($(".sertificateSlider").length > 0) {
+    const swiper = new Swiper(".sertificateSlider", {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".sertificateSlider .swiperBtnPrev",
+        nextEl: ".sertificateSlider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2.15,
+          spaceBetween: 5,
+        },
+        390: {
+          slidesPerView: 2.25,
+          spaceBetween: 7,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  if ($(".sliderReviews").length > 0) {
+    const swiper = new Swiper(".sliderReviews", {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".sliderReviews .swiperBtnPrev",
+        nextEl: ".sliderReviews .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.05,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 1.35,
+          spaceBetween: 26,
+        },
+        1200: {
+          slidesPerView: 1.65,
+          spaceBetween: 26,
+        },
+        1550: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+      },
+    });
+  }
   // /sliders
 
   // base
@@ -124,30 +302,6 @@ $(document).ready(function () {
         $(this).addClass("active");
         $(this).next(".faq-section__answer").stop().slideDown();
       }
-    });
-  }
-
-  if ($(".phone-input").length > 0) {
-    $(".phone-input").map(function () {
-      $(this).inputmask({
-        mask: "+7(999) 999-99-99",
-        placeholder: "*",
-        showMaskOnHover: false,
-        showMaskOnFocus: true,
-        clearIncomplete: true,
-      });
-    });
-  }
-
-  if ($(".thisYear").length > 0) {
-    let date = new Date();
-    $(".thisYear").text(date.getFullYear());
-  }
-
-  if ($("[data-fancybox]").length > 0) {
-    Fancybox.bind("[data-fancybox]", {
-      speedIn: 600,
-      speedOut: 600,
     });
   }
 
@@ -230,24 +384,6 @@ $(document).ready(function () {
       mouseevent: "click",
       attribute: "href",
       animation: true,
-    });
-  }
-
-  if ($(".modal").length > 0) {
-    MicroModal.init({
-      openTrigger: "data-modal",
-
-      onShow: () => {
-        $("body").addClass("modal-open");
-      },
-
-      onClose: () => {
-        $("body").removeClass("modal-open");
-      },
-    });
-
-    $("[data-modal]").map(function () {
-      $(this).click((e) => e.preventDefault());
     });
   }
 

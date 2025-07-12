@@ -1,0 +1,192 @@
+.consul-section {
+  background-color: #525151;
+  color: #c4c4c3;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1911' height='346' viewBox='0 0 1911 346' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M163.7 0.484828C242.36 0.484828 294.8 46.0248 305.84 107.665H243.28C232.7 70.8648 200.5 52.9248 163.24 52.9248C107.58 52.9248 68.48 92.0248 68.48 171.605C68.48 251.185 105.74 293.505 162.78 293.505C198.2 293.505 246.04 275.565 246.04 222.205V216.685H162.78V162.865H306.76V339.965H254.78L252.94 300.865C234.08 328.465 200.04 345.945 152.66 345.945C58.82 345.945 0.400001 278.325 0.400001 171.605C0.400001 68.1048 61.58 0.484828 163.7 0.484828ZM359.028 6.46483H424.808V199.205C424.808 258.085 436.768 293.505 497.488 293.505C558.208 293.505 569.248 258.085 569.248 199.205V6.46483H635.028V198.745C635.028 308.685 595.008 345.945 497.488 345.945C399.968 345.945 359.028 308.685 359.028 198.745V6.46483ZM891.711 339.965L825.471 209.325H809.831H755.551V339.965H689.771V6.46483H799.251C909.191 6.46483 951.051 37.7448 951.051 107.665C951.051 146.305 932.651 177.585 890.791 195.525L964.851 339.965H891.711ZM806.611 57.9848H755.551V158.265H809.831C861.351 158.265 883.431 141.245 883.431 108.125C883.431 69.4848 851.231 57.9848 806.611 57.9848ZM1209.92 339.965H1144.6L1062.26 89.2648V339.965H1001.08V6.46483H1096.76L1177.72 266.365L1256.38 6.46483H1352.98V339.965H1291.8V89.2648L1209.92 339.965ZM1378.17 339.965L1502.37 6.46483H1568.61L1693.27 339.965H1621.97L1598.51 272.345H1468.79L1445.33 339.965H1378.17ZM1533.65 86.9648L1487.65 218.525H1579.65L1533.65 86.9648ZM2004.03 339.965H1918.47L1785.07 85.5848V339.965H1722.97V6.46483H1808.53L1941.93 260.845V6.46483H2004.03V339.965Z' fill='%23C4C4C3' fill-opacity='0.06'/%3e%3c/svg%3e ");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .consul {
+    & + * {
+      margin-top: 100px;
+
+      @include responsive1199 {
+        margin-top: 25px;
+      }
+
+      @include responsive767 {
+        margin-top: 75px;
+      }
+    }
+  }
+}
+
+.consul {
+  position: relative;
+  z-index: 3;
+  padding: 50px 0;
+  color: $colorBlack;
+
+  @include responsive1199 {
+    padding: 30px 0;
+  }
+
+  @include responsive767 {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  @include before {
+    width: 500%;
+    height: 100%;
+    background-color: $colorWhite;
+    border-radius: 500px;
+    right: -295px;
+    z-index: -1;
+    top: 0;
+
+    @include responsive1549 {
+      right: -158px;
+      border-radius: 350px;
+    }
+
+    @include responsive1439 {
+      right: -40px;
+      border-radius: 300px;
+    }
+
+    @include responsive1199 {
+      right: -99px;
+      width: 200%;
+    }
+
+    @include responsive1023 {
+      border-radius: 50px;
+      right: -15px;
+    }
+
+    @include responsive767 {
+      border-radius: 100px;
+    }
+  }
+
+  .consul__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 524px;
+    margin-left: auto;
+
+    @include responsive1549 {
+      transform: translateX(-70px);
+    }
+
+    @include responsive1439 {
+      width: 450px;
+      transform: translateX(-150px);
+    }
+
+    @include responsive1199 {
+      transform: translateX(-100px);
+      width: 405px;
+    }
+
+    @include responsive1023 {
+      transform: translateX(-50px);
+      width: 382px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      gap: 16px;
+      transform: translateX(0);
+    }
+  }
+
+  .caption {
+    margin-bottom: -10px;
+
+    @include responsive767 {
+      margin: 0;
+    }
+  }
+
+  .input-item {
+    input {
+      width: 100%;
+      height: 50px;
+      border: solid 1px rgba(196, 196, 195, 0.5);
+      background-color: rgba(196, 196, 195, 0.5);
+      border-radius: 20px;
+      text-transform: none;
+      padding: 0 16px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $colorBlack;
+
+      @include responsive767 {
+        height: 40px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      &::placeholder {
+        text-transform: none;
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 12px;
+
+    @include responsive1199 {
+      margin-top: 0;
+    }
+
+    @include responsive767 {
+      height: 40px;
+    }
+  }
+
+  .consul-media {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 250px);
+    width: 394px;
+    height: 609px;
+
+    @include responsive1199 {
+      left: -110px;
+      top: calc(50% - 270px);
+    }
+
+    @include responsive1023 {
+      left: -36px;
+      top: calc(50% - 230px);
+      width: 340px;
+      height: 550px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding-top: calc(358 / 231 * 100%);
+      margin-bottom: -95px;
+    }
+
+    .picture-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

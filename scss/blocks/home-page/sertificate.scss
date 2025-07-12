@@ -1,0 +1,148 @@
+.sertificate {
+  .sertificate__head {
+    margin-bottom: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive1439 {
+      margin-bottom: 32px;
+    }
+
+    @include responsive1023 {
+      gap: 20px;
+    }
+
+    @include responsive767 {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+  }
+
+  .caption {
+    font-weight: 500;
+    font-size: 110px;
+    line-height: 140px;
+    font-family: $fontSuisse;
+
+    @include responsive1549 {
+      font-size: 90px;
+      line-height: 110px;
+    }
+
+    @include responsive1199 {
+      font-size: 80px;
+      line-height: 90px;
+    }
+
+    @include responsive1023 {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    @include responsive767 {
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+
+  p {
+    max-width: 472px;
+    text-align: right;
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      text-align: left;
+    }
+  }
+}
+
+.sertificateSlider {
+  width: 650px;
+  overflow: visible;
+
+  @include responsive1199 {
+    width: 500px;
+  }
+
+  @include responsive767 {
+    width: calc(100% + 32px);
+    left: -16px;
+    position: relative;
+    padding: 0 16px;
+  }
+
+  .swiper-slide {
+    @include invisLink;
+    border-radius: 12px;
+    background-color: $colorWhite;
+    padding: 21px 16px 40px;
+    transition: transform 0.3s;
+
+    @include responsive1439 {
+      padding: 24px;
+    }
+
+    @include hover {
+      transform: scale(0.99);
+    }
+  }
+
+  .picture-block {
+    height: auto;
+    box-shadow: 0px 0px 16px 0px #00000040;
+    width: 200px;
+    height: 270px;
+    margin: 0 auto;
+
+    @include responsive1199 {
+      width: 155px;
+      height: 213px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(125 / 90 * 100%);
+    }
+  }
+
+  .sertificateSlider__name {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    color: #525151;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+
+    @include responsive1549 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .swiperBtnPrev {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='48' height='39' viewBox='0 0 48 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.5 4.96484H1V37.9648H31V32.9648H9.5L9 31.9648L46 1.96484L39.5 0.964844L6.5 28.4648L5.5 27.4648L6.5 4.96484Z' fill='white' stroke='white'/%3e%3c/svg%3e ");
+  }
+
+  .swiperBtnNext {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='48' height='39' viewBox='0 0 48 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M41.5 33.9648H47V0.964844H17V5.96484H38.5L39 6.96484L2 36.9648L8.5 37.9648L41.5 10.4648L42.5 11.4648L41.5 33.9648Z' fill='%23fff' stroke='%23fff'/%3e%3c/svg%3e ");
+  }
+}

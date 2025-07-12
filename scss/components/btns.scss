@@ -41,10 +41,18 @@
   }
 
   @include responsive767 {
+    height: 40px;
   }
 
   &--orange {
+  }
+
+  &--dark {
+    background-color: $colorDark;
+    color: $colorWhite;
+
     @include hover {
+      opacity: 0.9;
     }
   }
 

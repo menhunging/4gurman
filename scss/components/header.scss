@@ -482,6 +482,10 @@
       top: 8px;
     }
 
+    @include responsive767 {
+      top: 5px;
+    }
+
     @include before {
       width: 200%;
       height: 200%;

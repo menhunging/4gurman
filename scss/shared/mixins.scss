@@ -46,8 +46,9 @@
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: text-decoration 0.3s;
+  text-underline-offset: 4px;
 
-  &:hover {
+  @include hover {
     text-decoration-color: $color;
   }
 }

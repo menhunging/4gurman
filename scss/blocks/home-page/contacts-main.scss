@@ -1,0 +1,343 @@
+.contacts-main {
+  position: relative;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  background-color: #c4c4c3;
+  overflow: hidden;
+
+  @include responsive1549 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include responsive1199 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive1023 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  a {
+    @include text-decoration-hover($colorBlack);
+  }
+
+  .contacts-main__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @include responsive1199 {
+      gap: 32px;
+    }
+
+    @include responsive1023 {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .map-block {
+    position: relative;
+    width: 50%;
+    min-height: 523px;
+
+    @include responsive1549 {
+      max-width: 594px;
+      min-height: 421px;
+    }
+
+    @include responsive1199 {
+      max-width: 460px;
+      min-height: 316px;
+      width: calc(50% - 63px);
+    }
+
+    @include responsive1023 {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% + 50px);
+      height: 100%;
+
+      @include responsive1023 {
+        width: 100%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .map-block__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 3;
+
+    @include responsive1549 {
+      gap: 16px;
+    }
+
+    @include responsive1023 {
+      width: 100%;
+      padding: 24px;
+    }
+
+    @include before {
+      background-color: $colorWhite;
+      left: -60px;
+      top: -42px;
+      border-bottom-right-radius: 200px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: calc(100% + 308px);
+      height: calc(100% + 84px);
+      z-index: -1;
+
+      @include responsive1549 {
+        top: -62px;
+        width: calc(100% + 220px);
+        height: calc(100% + 124px);
+      }
+
+      @include responsive1439 {
+        top: -65px;
+        width: calc(100% + 107px);
+        height: calc(100% + 130px);
+      }
+
+      @include responsive1199 {
+        top: -21px;
+        width: calc(100% + 194px);
+        height: calc(100% + 42px);
+      }
+
+      @include responsive1023 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 100px;
+      }
+    }
+  }
+
+  .map-block__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include responsive1549 {
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    @include responsive1199 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include before {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .map-block__adress {
+    &:before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='25' viewBox='0 0 17 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.5 0C6.24566 0 4.08365 0.906759 2.48959 2.5208C0.895533 4.13484 0 6.32396 0 8.60656C0 13.3607 8.5 25 8.5 25C8.5 25 17 13.3607 17 8.60656C17 6.32396 16.1045 4.13484 14.5104 2.5208C12.9163 0.906759 10.7543 0 8.5 0ZM8.5 11.8852C7.65943 11.8852 6.83773 11.6329 6.13882 11.16C5.43991 10.6872 4.89521 10.0151 4.57353 9.22877C4.25186 8.44244 4.16769 7.5772 4.33167 6.74245C4.49566 5.90769 4.90045 5.14091 5.49482 4.53909C6.08919 3.93727 6.84644 3.52742 7.67086 3.36137C8.49528 3.19533 9.34982 3.28056 10.1264 3.60626C10.903 3.93197 11.5668 4.48353 12.0338 5.1912C12.5008 5.89887 12.75 6.73086 12.75 7.58197C12.75 8.72327 12.3023 9.81782 11.5052 10.6248C10.7082 11.4319 9.62717 11.8852 8.5 11.8852Z' fill='%23CC232A'/%3e%3c/svg%3e ");
+    }
+  }
+
+  .map-block__adressStore {
+    &:before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='25' viewBox='0 0 17 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.5 0C6.24566 0 4.08365 0.906759 2.48959 2.5208C0.895533 4.13484 0 6.32396 0 8.60656C0 13.3607 8.5 25 8.5 25C8.5 25 17 13.3607 17 8.60656C17 6.32396 16.1045 4.13484 14.5104 2.5208C12.9163 0.906759 10.7543 0 8.5 0ZM8.5 11.8852C7.65943 11.8852 6.83773 11.6329 6.13882 11.16C5.43991 10.6872 4.89521 10.0151 4.57353 9.22877C4.25186 8.44244 4.16769 7.5772 4.33167 6.74245C4.49566 5.90769 4.90045 5.14091 5.49482 4.53909C6.08919 3.93727 6.84644 3.52742 7.67086 3.36137C8.49528 3.19533 9.34982 3.28056 10.1264 3.60626C10.903 3.93197 11.5668 4.48353 12.0338 5.1912C12.5008 5.89887 12.75 6.73086 12.75 7.58197C12.75 8.72327 12.3023 9.81782 11.5052 10.6248C10.7082 11.4319 9.62717 11.8852 8.5 11.8852Z' fill='%23CC232A'/%3e%3c/svg%3e ");
+    }
+  }
+
+  .map-block__phones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding-left: 48px;
+
+    @include responsive1549 {
+      padding-left: 36px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M22.68 15.1311C21.04 15.1311 19.4533 14.8867 17.9733 14.4467C17.5067 14.3 16.9867 14.41 16.6267 14.74L14.5333 17.1478C10.76 15.4978 7.22667 12.3811 5.34667 8.8L7.94667 6.77111C8.30667 6.42889 8.41333 5.95222 8.26667 5.52444C7.77333 4.16778 7.52 2.71333 7.52 1.21C7.52 0.55 6.92 0 6.2 0H1.58667C0.866667 0 0 0.293333 0 1.21C0 12.5644 10.3067 22 22.68 22C23.6267 22 24 21.23 24 20.5578V16.3411C24 15.6811 23.4 15.1311 22.68 15.1311Z' fill='%23CC232A'/%3e%3c/svg%3e ");
+
+      @include responsive1549 {
+        top: 0;
+      }
+    }
+  }
+
+  .map-block__mail {
+    &:before {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z' fill='%23CC232A'/%3e%3c/svg%3e ");
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.paws {
+  width: 575px;
+  height: 463px;
+  position: absolute;
+  right: -240px;
+  bottom: -65px;
+
+  @include responsive1549 {
+    right: -90px;
+    bottom: -78px;
+  }
+
+  @include responsive1439 {
+    right: -20px;
+    bottom: -105px;
+    transform: scale(0.8);
+    z-index: 3;
+  }
+
+  @include responsive1199 {
+    right: -90px;
+    bottom: -135px;
+    transform: scale(0.7);
+    z-index: 3;
+  }
+
+  @include responsive1023 {
+    right: -50px;
+    bottom: -105px;
+  }
+
+  @include responsive767 {
+    transform: scale(0.4);
+    right: -151px;
+    bottom: -165px;
+  }
+
+  .paw {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &--small {
+      background-image: url("../../../img/paws1.png");
+      background-image: image-set(
+        url("../../../img/paws1.webp") type("image/webp"),
+        url("../../../img/paws1.png") type("image/png")
+      );
+      width: 60px;
+      height: 60px;
+
+      @include responsive1439 {
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+    }
+
+    &--big {
+      background-image: url("../../../img/paws2.png");
+      background-image: image-set(
+        url("../../../img/paws2.webp") type("image/webp"),
+        url("../../../img/paws2.png") type("image/png")
+      );
+      width: 70px;
+      height: 70px;
+
+      @include responsive1439 {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .paw--1 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .paw--2 {
+    bottom: 70px;
+    left: 70px;
+  }
+
+  .paw--3 {
+    bottom: 55px;
+    left: 170px;
+  }
+
+  .paw--4 {
+    bottom: 125px;
+    left: 230px;
+  }
+
+  .paw--5 {
+    bottom: 85px;
+    left: 320px;
+  }
+
+  .paw--6 {
+    bottom: 185px;
+    left: 380px;
+  }
+
+  .paw--7 {
+    bottom: 145px;
+    left: 470px;
+  }
+
+  .paw--8 {
+    bottom: 245px;
+    left: 540px;
+  }
+}

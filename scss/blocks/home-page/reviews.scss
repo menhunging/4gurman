@@ -1,0 +1,235 @@
+.reviews {
+  position: relative;
+  overflow: hidden;
+
+  .reviews__caption {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 280px;
+    line-height: 200px;
+    color: #c4c4c3;
+
+    @include responsive1549 {
+      font-size: 200px;
+      line-height: 130px;
+    }
+
+    @include responsive1439 {
+      font-size: 160px;
+      line-height: 114px;
+    }
+
+    @include responsive1199 {
+      font-size: 140px;
+      line-height: 100px;
+    }
+
+    @include responsive767 {
+      font-size: 64px;
+      line-height: 45px;
+      left: 16px;
+    }
+  }
+}
+
+.review-item {
+  display: flex;
+  gap: 8px;
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  padding: 28px;
+
+  @include responsive767 {
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  @include responsive389 {
+    flex-direction: column;
+  }
+
+  .review-item__content {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    @include responsive1549 {
+      gap: 16px;
+    }
+
+    @include responsive1439 {
+      gap: 8px;
+    }
+
+    @include responsive1199 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      font-size: 12px;
+      line-height: 15px;
+      width: calc(100% - 130px);
+    }
+
+    @include responsive389 {
+      width: 100%;
+    }
+  }
+
+  .review-item__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 44px;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .review-item__name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(82, 81, 81, 0.8);
+
+    @include responsive1549 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1439 {
+      font-size: 15px;
+    }
+  }
+
+  .picture-block {
+    min-width: 191px;
+    width: 191px;
+    height: 225px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    @include responsive767 {
+      width: 128px;
+      height: 151px;
+      min-width: 128px;
+    }
+
+    @include responsive389 {
+      order: -1;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.sliderReviews {
+  margin-top: 245px;
+  overflow: visible;
+
+  @include responsive1549 {
+    margin-top: 165px;
+  }
+
+  @include responsive1199 {
+    margin-top: 135px;
+  }
+
+  @include responsive1023 {
+    margin-top: 100px;
+  }
+
+  @include responsive767 {
+    margin-top: 40px;
+  }
+
+  .swiper-slide {
+  }
+}
+
+.rating-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include responsive767 {
+    gap: 9px;
+  }
+
+  @include responsive389 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rating__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 44px;
+    color: $colorRed;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include responsive1549 {
+      gap: 9px;
+    }
+
+    @include responsive767 {
+      gap: 4px;
+    }
+
+    .star {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.8098 0.567832C10.8697 0.38357 11.1303 0.38357 11.1902 0.567832L13.6493 8.13602C13.676 8.21843 13.7528 8.27422 13.8395 8.27422H21.7971C21.9909 8.27422 22.0714 8.52214 21.9147 8.63602L15.4768 13.3134C15.4067 13.3643 15.3774 13.4546 15.4042 13.537L17.8632 21.1052C17.9231 21.2895 17.7122 21.4427 17.5554 21.3288L11.1176 16.6514C11.0475 16.6005 10.9525 16.6005 10.8824 16.6514L4.44456 21.3288C4.28781 21.4427 4.07692 21.2895 4.13679 21.1052L6.59584 13.537C6.62262 13.4546 6.59329 13.3643 6.52319 13.3134L0.0853021 8.63602C-0.0714406 8.52214 0.00911415 8.27422 0.202859 8.27422H8.16052C8.24717 8.27422 8.32396 8.21843 8.35073 8.13602L10.8098 0.567832Z' fill='%23a1a1a1'/%3e%3c/svg%3e ");
+      width: 24px;
+      height: 24px;
+
+      @include responsive767 {
+        width: 16px;
+        height: 16px;
+      }
+
+      &.active {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.8098 0.567832C10.8697 0.38357 11.1303 0.38357 11.1902 0.567832L13.6493 8.13602C13.676 8.21843 13.7528 8.27422 13.8395 8.27422H21.7971C21.9909 8.27422 22.0714 8.52214 21.9147 8.63602L15.4768 13.3134C15.4067 13.3643 15.3774 13.4546 15.4042 13.537L17.8632 21.1052C17.9231 21.2895 17.7122 21.4427 17.5554 21.3288L11.1176 16.6514C11.0475 16.6005 10.9525 16.6005 10.8824 16.6514L4.44456 21.3288C4.28781 21.4427 4.07692 21.2895 4.13679 21.1052L6.59584 13.537C6.62262 13.4546 6.59329 13.3643 6.52319 13.3134L0.0853021 8.63602C-0.0714406 8.52214 0.00911415 8.27422 0.202859 8.27422H8.16052C8.24717 8.27422 8.32396 8.21843 8.35073 8.13602L10.8098 0.567832Z' fill='%23CC232A'/%3e%3c/svg%3e ");
+      }
+    }
+  }
+}

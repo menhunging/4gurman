@@ -137,10 +137,18 @@
 
   .swiperBtnPrev {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='38' height='30' viewBox='0 0 38 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M36 27.8954V14.8954H2M2 14.8954L15.4463 1.89536M2 14.8954L15.4463 27.8954' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+
+    @include hover {
+      transform: scale(0.9);
+    }
   }
 
   .swiperBtnNext {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='30' viewBox='0 0 37 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 28.0345V14.8954H35M35 14.8954L21.9492 1.7562M35 14.8954L21.9492 28.0345' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+
+    @include hover {
+      transform: scale(0.9);
+    }
   }
 
   .swiper-pagination {

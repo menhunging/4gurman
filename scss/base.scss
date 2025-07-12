@@ -432,13 +432,12 @@ section {
     display: block;
     align-items: center;
     gap: 8px;
-    padding-left: 70px;
-    color: $colorWhite;
+    padding-left: 45px;
+    color: $colorBlack;
 
     @include responsive1549 {
       font-size: 14px;
       line-height: 17px;
-      padding-left: 65px;
     }
 
     @include responsive1199 {
@@ -446,15 +445,16 @@ section {
     }
 
     @include responsive1023 {
-      padding-left: 50px;
+      padding-left: 35px;
     }
 
     a {
       text-decoration: underline;
       opacity: 0.3;
       transition: opacity 0.3s;
+      text-underline-offset: 4px;
 
-      &:hover {
+      @include hover {
         opacity: 1;
       }
     }
@@ -462,22 +462,17 @@ section {
     @include before {
       left: 0;
       top: 50%;
-      width: 48px;
-      height: 48px;
+      width: 28px;
+      height: 28px;
       border: 0;
       border-radius: 4px;
       overflow: hidden;
       transform: translateY(-50%);
-      background-color: $colorWhite;
-
-      @include responsive1549 {
-        width: 42px;
-        height: 42px;
-      }
+      border: solid 1px $colorBlack;
 
       @include responsive1023 {
-        width: 38px;
-        height: 38px;
+        width: 24px;
+        height: 24px;
       }
     }
 
@@ -485,8 +480,8 @@ section {
       background-color: $colorWhite;
       left: 0;
       top: 50%;
-      width: 48px;
-      height: 48px;
+      width: 28px;
+      height: 28px;
       opacity: 0;
       border-radius: 4px;
       overflow: hidden;
@@ -494,16 +489,11 @@ section {
       background-position: center;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='35' height='25' viewBox='0 0 35 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 9.5L13.8077 22L33.5 2' stroke='%23EDEADF' stroke-width='4'/%3e%3c/svg%3e ");
       background-repeat: no-repeat;
-
-      @include responsive1549 {
-        width: 42px;
-        height: 42px;
-        background-size: 24px;
-      }
+      background-size: 15px;
 
       @include responsive1023 {
-        width: 38px;
-        height: 38px;
+        width: 24px;
+        height: 24px;
         background-size: 50%;
       }
     }
@@ -799,5 +789,136 @@ section {
   }
 
   .fraction__all {
+  }
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include responsive1549 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .caption {
+  }
+
+  p {
+    max-width: 800px;
+    width: 100%;
+  }
+}
+
+.swiper-controls-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: $colorWhite;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  gap: 47px;
+  margin: 40px auto 0;
+
+  @include responsive1199 {
+    margin-top: 24px;
+  }
+
+  @include responsive767 {
+    gap: 24px;
+  }
+
+  .swiperBtnPrev {
+    position: relative;
+    width: 45px;
+    height: 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='39' viewBox='0 0 47 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 4.98242H0.5V37.9824H30.5V32.9824H9L8.5 31.9824L45.5 1.98242L39 0.982422L6 28.4824L5 27.4824L6 4.98242Z' fill='%233A3A3A' stroke='%233A3A3A'/%3e%3c/svg%3e ");
+    transition: all 0.3s;
+
+    @include responsive767 {
+      width: 24px;
+      height: 19px;
+      min-width: 24px;
+    }
+
+    @include hover {
+      transform: scale(0.9);
+    }
+  }
+
+  .swiperBtnNext {
+    position: relative;
+    width: 45px;
+    height: 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='47' height='39' viewBox='0 0 47 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M41 33.9824H46.5V0.982422H16.5V5.98242H38L38.5 6.98242L1.5 36.9824L8 37.9824L41 10.4824L42 11.4824L41 33.9824Z' fill='%233A3A3A' stroke='%233A3A3A'/%3e%3c/svg%3e ");
+    transition: all 0.3s;
+
+    @include responsive767 {
+      width: 24px;
+      height: 19px;
+      min-width: 24px;
+    }
+
+    @include hover {
+      transform: scale(0.9);
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: 0.33;
+    pointer-events: none;
+  }
+}
+
+.link-site {
+  position: relative;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='18' viewBox='0 0 14 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 2.12484V0.0848433H13.34V12.6548H11.15V6.53484L11.48 4.10484L11.15 3.83484L3.95 8.51484C3.05 9.08484 2.78 9.50484 2.78 10.5848V17.9648H0.53V11.5448C0.53 9.32484 1.67 7.28484 3.53 6.14484L8.42 3.20484L10.37 2.51484L10.16 2.12484H2Z' fill='%233A3A3A'/%3e%3c/svg%3e ");
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 25px;
+  @include text-decoration-hover($colorBlack);
+
+  @include responsive1549 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include responsive1439 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive1199 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
