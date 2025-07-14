@@ -283,6 +283,31 @@ $(document).ready(function () {
       },
     });
   }
+
+  if ($(".sliderMade").length > 0) {
+    const swiper = new Swiper(".sliderMade", {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.4,
+          spaceBetween: 5,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 17,
+        },
+        1440: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
   // /sliders
 
   // base
