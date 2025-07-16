@@ -130,6 +130,65 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".catalog-filter-row__head").length > 0) {
+    $(".catalog-filter-row__head").on("click", function () {
+      const self = $(this);
+      const isOpened = self.hasClass("opened");
+
+      $(".catalog-filter-row__head")
+        .removeClass("opened")
+        .next()
+        .stop()
+        .slideUp();
+
+      if (!isOpened) {
+        self.addClass("opened").next().stop().slideDown();
+      }
+    });
+  }
+
+  if ($(".product-info-rows__head").length > 0) {
+    $(".product-info-rows__head").on("click", function () {
+      const self = $(this);
+      const isOpened = self.hasClass("opened");
+
+      $(".product-info-rows__head")
+        .removeClass("opened")
+        .next()
+        .stop()
+        .slideUp();
+
+      if (!isOpened) {
+        self.addClass("opened").next().stop().slideDown();
+      }
+    });
+  }
+
+  if ($(".btn-filter").length > 0) {
+    let filter = $(".catalog-filter");
+    let close = $(".filter__close");
+    let body = $("body");
+    let overlay = $(".overlay");
+
+    $(".btn-filter").on("click", function () {
+      filter.toggleClass("opened");
+      body.toggleClass("hidden");
+      overlay.toggleClass("visible");
+    });
+
+    close.on("click", function () {
+      filter.removeClass("opened");
+      body.removeClass("hidden");
+      overlay.removeClass("visible");
+    });
+
+    overlay.on("click", function () {
+      filter.removeClass("opened");
+      body.removeClass("hidden");
+      overlay.removeClass("visible");
+    });
+  }
+
   // sliders
   if ($(".grettingsSlider").length > 0) {
     const swiper = new Swiper(".grettingsSlider", {
@@ -302,6 +361,50 @@ $(document).ready(function () {
         },
         1440: {
           slidesPerView: 2,
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
+  if ($(".product-info__big").length > 0) {
+    const sliderSmall = new Swiper(".product-info__small", {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      watchSlidesProgress: true,
+    });
+
+    const sliderBig = new Swiper(".product-info__big", {
+      spaceBetween: 10,
+      thumbs: {
+        swiper: sliderSmall,
+      },
+      navigation: {
+        prevEl: ".product-info__big .swiperBtnPrev",
+        nextEl: ".product-info__big .swiperBtnNext",
+      },
+    });
+  }
+
+  if ($(".section-other__slider").length > 0) {
+    const swiper = new Swiper(".section-other__slider", {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".section-other__slider .swiperBtnPrev",
+        nextEl: ".section-other__slider .swiperBtnNext",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1.4,
+          spaceBetween: 5,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 17,
+        },
+        1440: {
+          slidesPerView: 4,
           spaceBetween: 24,
         },
       },

@@ -1,0 +1,53 @@
+.pagination {
+  width: 100%;
+  padding: 45px 0;
+
+  @include responsive767 {
+    padding: 32px 0;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__item {
+}
+
+.pagination__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  width: 32px;
+  height: 32px;
+  color: $colorDark;
+  transition: all 0.3s;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include responsive1199 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &.active {
+    color: $colorWhite;
+    background-color: #8a0000;
+  }
+
+  @include hover {
+    color: $colorWhite;
+    background-color: #8a0000;
+  }
+}

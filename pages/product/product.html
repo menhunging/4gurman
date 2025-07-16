@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+
+    <title>Карточка товара</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Зона комфорта" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="inner-page">
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="burger">
+                        <div class="burger__icon">
+                            <div class="burger__inner">
+                                <span class="burger__line"></span>
+                                <span class="burger__line"></span>
+                                <span class="burger__line"></span>
+                            </div>
+                        </div>
+                        <div class="burger__text">Меню</div>
+                    </div>
+
+                    <div class="header-link-animals">
+                        <a href="#" class="header-link header-link--cat">Кошкам</a>
+                        <a href="#" class="header-link header-link--dog">Собакам</a>
+                    </div>
+
+                    <div class="logo">
+                        <a href="#">
+                            <div class="picture-block">
+                                <picture>
+                                    <source type="image/webp" srcset="./../../img/logo.png" />
+                                    <img src="./../../img/logo.png" alt="">
+                                </picture>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="search-block">
+                        <span class="search-block__icon"></span>
+                    </div>
+
+                    <a href="tel:+74959213074" class="header-phone-link">+7 (495) 921-30-74</a>
+
+                    <a href="mailto:test@test.ru" class="header-mail-link"></a>
+
+                    <ul class="header-markets">
+                        <li>
+                            <a href="#" class="header-markets__link">
+                                <div class="picture-block">
+                                    <picture>
+                                        <img src="./../../img/svg/ic-market1.svg" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-markets__link">
+                                <div class="picture-block">
+                                    <picture>
+                                        <img src="./../../img/svg/ic-market2.svg" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-markets__link">
+                                <div class="picture-block">
+                                    <picture>
+                                        <img src="./../../img/svg/ic-market3.svg" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="product-section">
+                <section class="breadcrumbs">
+                    <div class="container">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Назад</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <div class="product-info">
+                    <div class="container">
+                        <div class="product-info__media">
+                            <div class="product-info__big swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="swiperBtnPrev"></span>
+                                <span class="swiperBtnNext"></span>
+                            </div>
+
+                            <div class="product-info__small swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="picture-block">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-product2.webp" />
+                                                <img src="./../../img/pic-product2.jpg" alt="">
+                                            </picture>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info__content">
+                            <div class="product-info__title">
+                                <h1 class="caption caption--h4">Кусочки в соусе для кошек и котят</h1>
+                                <a href="#" class="cat">Colden line</a>
+                            </div>
+                            <p>
+                                Корм влажный для собак и щенков Четвероногий гурман "Golden line Мусс с говядиной", 100
+                                г
+                            </p>
+
+                            <div class="product-info-rows">
+                                <div class="product-info-rows__line">
+                                    <div class="product-info-rows__head">
+                                        Состав
+                                    </div>
+                                    <div class="product-info-rows__body">
+                                        <p>
+                                            Консервы подходят для собак всех пород для ежедневного кормления или как
+                                            дополнение к основному рациону. Подходит для питомцев, которым показана
+                                            строгая или монобелковая диета в связи с аллергией или проблемами
+                                            чувствительного пищеварения. Подходит для питомцев, которым показана строгая
+                                            или монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения. Подходит для питомцев, которым показана строгая или
+                                            монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="product-info-rows__line">
+                                    <div class="product-info-rows__head">
+                                        Состав
+                                    </div>
+                                    <div class="product-info-rows__body">
+                                        <p>
+                                            Консервы подходят для собак всех пород для ежедневного кормления или как
+                                            дополнение к основному рациону. Подходит для питомцев, которым показана
+                                            строгая или монобелковая диета в связи с аллергией или проблемами
+                                            чувствительного пищеварения. Подходит для питомцев, которым показана строгая
+                                            или монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения. Подходит для питомцев, которым показана строгая или
+                                            монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="product-info-rows__line">
+                                    <div class="product-info-rows__head">
+                                        Питательная и энергетическая ценность
+                                    </div>
+                                    <div class="product-info-rows__body">
+                                        <p>
+                                            Консервы подходят для собак всех пород для ежедневного кормления или как
+                                            дополнение к основному рациону. Подходит для питомцев, которым показана
+                                            строгая или монобелковая диета в связи с аллергией или проблемами
+                                            чувствительного пищеварения. Подходит для питомцев, которым показана строгая
+                                            или монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения. Подходит для питомцев, которым показана строгая или
+                                            монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="product-info-rows__line">
+                                    <div class="product-info-rows__head">
+                                        Нормы кормления
+                                    </div>
+                                    <div class="product-info-rows__body">
+                                        <p>
+                                            Консервы подходят для собак всех пород для ежедневного кормления или как
+                                            дополнение к основному рациону. Подходит для питомцев, которым показана
+                                            строгая или монобелковая диета в связи с аллергией или проблемами
+                                            чувствительного пищеварения. Подходит для питомцев, которым показана строгая
+                                            или монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения. Подходит для питомцев, которым показана строгая или
+                                            монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="product-info-rows__line">
+                                    <div class="product-info-rows__head">
+                                        Основные преимущества
+                                    </div>
+                                    <div class="product-info-rows__body">
+                                        <p>
+                                            Консервы подходят для собак всех пород для ежедневного кормления или как
+                                            дополнение к основному рациону. Подходит для питомцев, которым показана
+                                            строгая или монобелковая диета в связи с аллергией или проблемами
+                                            чувствительного пищеварения. Подходит для питомцев, которым показана строгая
+                                            или монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения. Подходит для питомцев, которым показана строгая или
+                                            монобелковая диета в связи с аллергией или проблемами чувствительного
+                                            пищеварения
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="marketplace">
+                                <span class="title">Купить на</span>
+
+                                <ul class="marketplace__list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/market1.webp" />
+                                                    <img src="./../../img/market1.png" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/market2.webp" />
+                                                    <img src="./../../img/market2.png" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/market3.webp" />
+                                                    <img src="./../../img/market3.png" alt="">
+                                                </picture>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product-info-bottom">
+                            <div class="product-info-bottom__item">
+                                <span class="product-info-bottom__title">Фасовки:</span>
+                                <ul>
+                                    <li>
+                                        <span>100 г</span>
+                                    </li>
+                                    <li>
+                                        <span>190 г</span>
+                                    </li>
+                                    <li>
+                                        <span>340 г</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="product-info-bottom__item">
+                                <span class="product-info-bottom__title">Варианты вкусов:</span>
+                                <ul>
+                                    <li>
+                                        <div class="picture-block" data-title="Курочка">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-anim1.webp" />
+                                                <img src="./../../img/pic-anim1.png" alt="">
+                                            </picture>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="picture-block" data-title="Шашлык">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-anim2.webp" />
+                                                <img src="./../../img/pic-anim2.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="picture-block" data-title="Кролик">
+                                            <picture>
+                                                <source type="image/webp" srcset="./../../img/pic-anim3.webp" />
+                                                <img src="./../../img/pic-anim3.png" alt="">
+                                            </picture>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="product-section-content">
+                    <div class="container">
+                        <span class="product-section-content__title">С заботой о ваших питомцах</span>
+                        <p>Помимо привлекательного вкуса, все виды субпродуктов по-своему полезны: некоторые из них
+                            являются хорошим источником белка, другие содержат аминокислоты, витамины или коллаген. </p>
+
+                        <p>Многие субпродукты достаточно сложны в приготовлении, а данная линейка позволяет без хлопот и
+                            кропотливой готовки угостить собаку настоящими мясными лакомствами.</p>
+
+                        <ul>
+                            <li>
+                                <div class="picture-block product-section-content__icon">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/ic-info1.webp" />
+                                        <img src="./../../img/ic-info1.png" alt="">
+                                    </picture>
+                                </div>
+
+                                <span class="product-section-content__name">Натуральное мясо</span>
+                                <p>
+                                    Отличный источник высококачественного белка, который необходим для роста
+                                </p>
+                            </li>
+                            <li>
+                                <div class="picture-block product-section-content__icon">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/ic-info2.webp" />
+                                        <img src="./../../img/ic-info2.png" alt="">
+                                    </picture>
+                                </div>
+                                <span class="product-section-content__name">Свежие овощи</span>
+                                <p>
+                                    Овощи богаты клетчаткой, что помогает поддерживать здоровье
+                                </p>
+                            </li>
+                            <li>
+                                <div class="picture-block product-section-content__icon">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/ic-info3.webp" />
+                                        <img src="./../../img/ic-info3.png" alt="">
+                                    </picture>
+                                </div>
+                                <span class="product-section-content__name">Злаки</span>
+                                <p>
+                                    Содержат множество витаминов и минералов
+                                </p>
+                            </li>
+                            <li>
+                                <div class="picture-block product-section-content__icon">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/ic-info4.webp" />
+                                        <img src="./../../img/ic-info4.png" alt="">
+                                    </picture>
+                                </div>
+                                <span class="product-section-content__name">Витамины</span>
+                                <p>
+                                    Содержат множество витаминов и минералов
+                                </p>
+                            </li>
+                        </ul>
+
+                        <div class="picture-block product-section-content__media">
+                            <picture>
+                                <source type="image/webp" srcset="./../../img/bg-dog-info.webp" />
+                                <img src="./../../img/bg-dog-info.png" alt="">
+                            </picture>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section-other">
+                    <div class="container">
+                        <div class="title-section">
+                            <h2 class="caption caption--h2--alt">Похожие товары линейки</h2>
+                        </div>
+
+                        <div class="section-other__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="picture-block">
+                                        <a href="#"></a>
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-product.webp" />
+                                            <img src="./../../img/pic-product.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <a href="#" class="link">Мясное ассорти с говядиной для собак</a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="picture-block">
+                                        <a href="#"></a>
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-product.webp" />
+                                            <img src="./../../img/pic-product.jpg" alt="">
+                                        </picture>
+                                    </div>
+
+                                    <a href="#" class="link">Мясное ассорти с говядиной для собак</a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="picture-block">
+                                        <a href="#"></a>
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-product.webp" />
+                                            <img src="./../../img/pic-product.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <a href="#" class="link">Мясное ассорти с говядиной для собак</a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="picture-block">
+                                        <a href="#"></a>
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-product.webp" />
+                                            <img src="./../../img/pic-product.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <a href="#" class="link">Мясное ассорти с говядиной для собак</a>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="picture-block">
+                                        <a href="#"></a>
+                                        <picture>
+                                            <source type="image/webp" srcset="./../../img/pic-product.webp" />
+                                            <img src="./../../img/pic-product.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <a href="#" class="link">Мясное ассорти с говядиной для собак</a>
+                                </div>
+                            </div>
+                            <div class="swiper-controls-simple">
+                                <button class="swiperBtnPrev"></button>
+                                <button class="swiperBtnNext"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <a href="#">
+                                <div class="picture-block">
+                                    <picture>
+                                        <source type="image/webp" srcset="./../../img/logo-footer.png" />
+                                        <img src="./../../img/logo-footer.png" alt="">
+                                    </picture>
+                                </div>
+                            </a>
+                        </div>
+
+                        <p class="copyRight">
+                            ООО «Четвероногий Гурман» <br />
+                            Офис: 127015, г. Москва, ул. <br />
+                            Новодмитровская, д. 2, к. 2
+                        </p>
+                    </div>
+
+                    <div class="footer-col footer-col--menu">
+                        <div class="footer-menu">
+                            <a href="#" class="footer-title footer-link">О компании</a>
+                            <a href="#" class="footer-link">Наши бренды</a>
+                            <a href="#" class="footer-link">Сотрудничество</a>
+                            <a href="#" class="footer-link">Контакты</a>
+                            <a href="#" class="footer-link">Новости и статьи</a>
+                        </div>
+
+                        <div class="footer-menu">
+                            <a href="#" class="footer-title footer-link">Каталог</a>
+                            <a href="#" class="footer-link">Собакам</a>
+                            <a href="#" class="footer-link">Кошкам</a>
+                        </div>
+
+                        <div class="footer-menu">
+                            <a href="#" class="footer-link">Калькулятор нормы кормления</a>
+                            <a href="#" class="footer-link">Подбор корма</a>
+                            <a href="#" class="footer-link">Где купить</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col footer-col--data">
+                        <a href="mailto:gurman@4gurman.ru" class="footer-mail">gurman@4gurman.ru</a>
+                        <a href="tel:+74959213074" class="footer-phone">+7 (495) 921-30-74</a>
+                    </div>
+
+                    <div class="footer-col footer-col--markets">
+                        <ul class="header-markets">
+                            <li>
+                                <a href="#" class="header-markets__link">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <img src="./../../img/svg/ic-market1-footer.svg" alt="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-markets__link">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <img src="./../../img/svg/ic-market2-footer.svg" alt="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="header-markets__link">
+                                    <div class="picture-block">
+                                        <picture>
+                                            <img src="./../../img/svg/ic-market3-footer.svg" alt="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <ul class="social">
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <span class="copyRight"><span class="thisYear"></span> &copy; Все права защищены.</span>
+
+                    <div class="footer-bottom__links">
+                        <a href="/politic-cookie/">Политика использования файлов cookie</a>
+                        <a href="/licenses/">Политика обработки персональных данных</a>
+                        <a href="/politic-form/">Согласие на получение рассылки</a>
+                        <a href="/politic-users/">Пользовательское соглашение</a>
+                        <a href="/politic-conf/">Политика конфиденциальности</a>
+                    </div>
+
+                    <div class="develop">
+                        <a href="https://fouro.ru/" class="develop__link"></a>
+                        <span class="develop__desc">Powered by</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="menu-invis">
+        <div class="container">
+            <span class="menu-invis__title">Меню</span>
+
+            <div class="menu-invis__content">
+                <ul class="menu-invis__ul">
+                    <li>
+                        <a href="#" class="active">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#">О компании</a>
+                    </li>
+                    <li>
+                        <a href="#">Наши бренды</a>
+                    </li>
+                    <li>
+                        <a href="#">Сотрудничество</a>
+                    </li>
+                    <li>
+                        <a href="#">Новости и статьи</a>
+                    </li>
+                </ul>
+
+                <ul class="menu-invis__ul">
+                    <li>
+                        <a href="#">Калькулятор нормы кормления</a>
+                    </li>
+                    <li>
+                        <a href="#">Подбор корма</a>
+                    </li>
+                    <li>
+                        <a href="#">Где купить</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="header-markets">
+                    <li>
+                        <a href="#" class="header-markets__link">
+                            <div class="picture-block">
+                                <picture>
+                                    <img src="./../../img/svg/ic-market1-gray.svg" alt="">
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-markets__link">
+                            <div class="picture-block">
+                                <picture>
+                                    <img src="./../../img/svg/ic-market2-gray.svg" alt="">
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header-markets__link">
+                            <div class="picture-block">
+                                <picture>
+                                    <img src="./../../img/svg/ic-market3-gray.svg" alt="">
+                                </picture>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="picture-block menu-invis__media">
+                <picture>
+                    <source type="image/webp" srcset="./../../img/pic-menu.webp" />
+                    <img src="./../../img/pic-menu.png" alt="">
+                </picture>
+
+            </div>
+
+            <span class="close"></span>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="../../libs/jquery/jquery-3.7.1.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/selectric/jquery.selectric.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<!-- <script src="../../libs/aos/aos.js"></script> -->
+<script src="../../js/main.js"></script>
+
+</html>

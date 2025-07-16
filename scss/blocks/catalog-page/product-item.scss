@@ -1,0 +1,119 @@
+.product-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(58, 58, 58, 0.5);
+
+  @include responsive1549 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive1199 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include responsive767 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .picture-block {
+    width: 100%;
+    height: 236px;
+    background-color: #f5f5f5;
+    border-bottom-right-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include invisLink;
+
+    @include responsive1549 {
+      height: 198px;
+    }
+
+    @include responsive1199 {
+      height: 150px;
+      border-bottom-right-radius: 40px;
+    }
+
+    @include responsive389 {
+      height: 100px;
+    }
+
+    @include hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
+
+    picture {
+      width: 256px;
+      height: 137px;
+      margin: 0 auto;
+      position: relative;
+
+      @include responsive1549 {
+        width: 200px;
+        height: 140px;
+      }
+
+      @include responsive1199 {
+        width: 157px;
+        height: 84px;
+      }
+
+      @include responsive767 {
+        width: 138px;
+        height: 74px;
+      }
+
+      @include responsive389 {
+        width: 100px;
+        height: 55px;
+      }
+    }
+
+    img {
+      object-fit: contain;
+      transition: all 0.3s;
+    }
+  }
+
+  .link {
+    color: $colorBlack;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    min-height: 60px;
+    @include text-decoration-hover($colorBlack);
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+      min-height: 50px;
+    }
+
+    @include responsive1199 {
+      font-size: 16px;
+      line-height: 20px;
+      min-height: 40px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 17px;
+      min-height: 36px;
+    }
+  }
+}

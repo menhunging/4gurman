@@ -1,9 +1,25 @@
 .header {
-  background-color: $colorBlack;
+  // background-color: $colorBlack;
   color: $colorWhite;
   padding: 18px 0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 5;
+  background: linear-gradient(
+    321.91deg,
+    rgba(0, 0, 0, 0) 20.94%,
+    rgba(0, 0, 0, 0.5) 77.05%
+  );
+
+  @include responsive767 {
+    background: linear-gradient(
+      1.55deg,
+      rgba(0, 0, 0, 0) 1.38%,
+      rgba(0, 0, 0, 0.5) 98.74%
+    );
+  }
 }
 
 .header__inner {
@@ -403,7 +419,7 @@
 
   .header-markets {
     position: relative;
-    display: none;
+    display: none !important;
 
     @include responsive767 {
       display: flex !important;

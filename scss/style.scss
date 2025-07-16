@@ -11,6 +11,8 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/burger";
+@import "./components/breadcrumbs";
+@import "./components/pagination";
 
 // HOME PAGE
 @import "blocks/home-page/grettings-main.scss";
@@ -26,6 +28,16 @@
 @import "blocks/home-page/news-main.scss";
 @import "blocks/home-page/teams-main.scss";
 @import "blocks/home-page/contacts-main.scss";
+
+// CATALOG PAGE
+@import "blocks/catalog-page/grettings-inner.scss";
+@import "blocks/catalog-page/catalog.scss";
+@import "blocks/catalog-page/product-item.scss";
+@import "blocks/catalog-page/filter.scss";
+
+// PRODUCT PAGE
+@import "blocks/product-page/product.scss";
+@import "blocks/product-page/section-other.scss";
 
 // BLOCKS
 @import "blocks";
