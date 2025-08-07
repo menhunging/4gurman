@@ -411,6 +411,102 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".article-slider__slider").length > 0) {
+    const sliders = document.querySelectorAll(".article-slider__slider");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 3,
+            spaceBetween: 26,
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1.1,
+                spaceBetween: 16,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+              },
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 26,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
+  if ($(".article-slider__slider--v2").length > 0) {
+    const sliders = document.querySelectorAll(".article-slider__slider--v2");
+    let mySwipers = [];
+
+    function sliderinit() {
+      sliders.forEach((slider, index) => {
+        let navNext = undefined;
+        let navPrev = undefined;
+
+        if (!slider.swiper) {
+          navNext = $(slider).find(".swiperBtnNext")[0];
+          navPrev = $(slider).find(".swiperBtnPrev")[0];
+
+          mySwipers[index] = new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 32,
+            navigation: {
+              nextEl: navNext && navNext,
+              prevEl: navPrev && navPrev,
+            },
+            breakpoints: {
+              0: {
+                slidesPerView: 1.1,
+                spaceBetween: 16,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1280: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+              },
+            },
+          });
+        } else {
+          return;
+        }
+      });
+    }
+
+    sliders.length && sliderinit();
+  }
+
   // /sliders
 
   // base

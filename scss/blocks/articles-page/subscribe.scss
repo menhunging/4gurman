@@ -1,0 +1,157 @@
+.subscribe {
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include responsive1199 {
+      align-items: flex-start;
+    }
+
+    @include responsive767 {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @include before {
+      background-color: #f5f5f5;
+      right: 0;
+      top: -60px;
+      border-radius: 40px;
+      width: 200%;
+      height: calc(100% + 120px);
+      z-index: -1;
+
+      @include responsive1549 {
+        top: -50px;
+        height: calc(100% + 100px);
+      }
+
+      @include responsive767 {
+        top: -30px;
+        height: calc(100% + 60px);
+        border-radius: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .subscribe-media {
+    width: 601px;
+    height: 345px;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    right: 60px;
+
+    @include responsive1549 {
+      width: 551px;
+      height: 317px;
+      right: 30px;
+    }
+
+    @include responsive1199 {
+      width: 349px;
+      height: 199px;
+    }
+
+    @include responsive1023 {
+      right: 0;
+      width: 329px;
+      height: 269px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(204 / 357 * 100%);
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .subscribe__form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    @include responsive1549 {
+      width: 484px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1199 {
+      width: 420px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      width: 380px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+    }
+
+    .caption {
+      margin-bottom: 15px;
+
+      @include responsive1549 {
+        margin-bottom: 10px;
+      }
+
+      @include responsive1199 {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .input-item {
+    @include responsive767 {
+    }
+
+    input {
+      background-color: #c4c4c3;
+      width: 100%;
+      height: 50px;
+      border-radius: 20px;
+      color: $colorDark;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 16px;
+
+      @include responsive767 {
+        height: 40px;
+        font-size: 15px;
+      }
+
+      &::placeholder {
+        text-transform: none;
+      }
+    }
+  }
+
+  .btn {
+    height: 50px;
+    border-radius: 20px;
+
+    @include responsive767 {
+      height: 40px;
+    }
+  }
+}

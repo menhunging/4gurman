@@ -40,6 +40,10 @@ body {
       }
     }
   }
+
+  &.simple-page {
+    padding-top: 67px;
+  }
 }
 
 .container {
@@ -435,8 +439,8 @@ section {
   label {
     cursor: pointer;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 14px;
     position: relative;
     padding-left: 24px;
     text-decoration-color: transparent;
@@ -462,11 +466,20 @@ section {
       padding-left: 35px;
     }
 
+    @include responsive767 {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
     a {
       text-decoration: underline;
       opacity: 0.3;
       transition: opacity 0.3s;
       text-underline-offset: 4px;
+
+      @include responsive767 {
+        text-underline-offset: 2px;
+      }
 
       @include hover {
         opacity: 1;
