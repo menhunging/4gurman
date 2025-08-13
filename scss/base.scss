@@ -168,7 +168,6 @@ section {
 .selectric-wrapper {
   border: 0;
   outline: none;
-  height: 50px;
 
   &.selectric-hover {
     .selectric {
@@ -194,10 +193,6 @@ section {
     .selectric-scroll ul {
     }
   }
-
-  @include responsive1549 {
-    height: 30px;
-  }
 }
 
 .selectric {
@@ -211,35 +206,29 @@ section {
   border-right: 0;
   border-radius: 0;
 
-  @include responsive1549 {
-    height: 30px;
-  }
-
   .label {
-    font-weight: 400;
     height: 100%;
-    padding: 10px 0;
-    font-weight: 400;
+    font-weight: 500;
     font-family: $fontMain;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0%;
+    font-size: 18px;
+    line-height: 20px;
     margin: 0;
-    color: $colorBlack;
-    border-bottom: solid 1px rgba(159, 159, 159, 1);
+    color: $colorDark;
+    background-color: rgba(196, 196, 195, 0.5);
+    padding: 14px 20px;
+    border-radius: 20px;
 
-    @include responsive1549 {
-      padding: 0;
-      font-size: 12px;
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 
   .button {
-    display: none;
     width: 24px;
     height: 24px;
     background: transparent;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='8' viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 1L7.5 7L13.5 1' stroke='%23222222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 1L7 7L1 1' stroke='%23525151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 12px;
@@ -468,6 +457,10 @@ section {
 
     @include responsive767 {
       font-size: 10px;
+      line-height: 28px;
+    }
+
+    @include responsive639 {
       line-height: 12px;
     }
 
@@ -868,5 +861,41 @@ section {
       margin: 0 auto;
       display: block;
     }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.big-cat-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: calc(1009 / 1920 * 100%);
+  padding-bottom: 0;
+
+  @include responsive767 {
+    padding-top: calc(290 / 390 * 100%);
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

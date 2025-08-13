@@ -1,0 +1,111 @@
+.not-page {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  position: relative;
+  padding-top: 0;
+
+  @include responsive1439 {
+    font-size: 28px;
+    list-style: 30px;
+  }
+
+  @include responsive1199 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @include responsive767 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include before {
+    background-image: url("../img/bg-404.png");
+    background-image: image-set(
+      url("../img/bg-404.webp") type("image/webp"),
+      url("../img/bg-404.png") type("image/png")
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 746px;
+    height: 870px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include responsive1699 {
+      width: 650px;
+      height: 760px;
+      left: -150px;
+    }
+
+    @include responsive1439 {
+      width: 505px;
+      height: 589px;
+      left: -110px;
+      background-size: contain;
+    }
+
+    @include responsive1199 {
+      width: 326px;
+      height: 380px;
+      left: 0;
+    }
+
+    @include responsive1023 {
+      left: -100px;
+    }
+
+    @include responsive767 {
+      width: 250px;
+      height: 290px;
+    }
+  }
+
+  .picture-block {
+    width: 710px;
+    height: 372px;
+    margin: 0 auto;
+
+    @include responsive1439 {
+      width: 453px;
+      height: 202px;
+    }
+
+    @include responsive1199 {
+      width: 386px;
+      height: 232px;
+      margin-bottom: -40px;
+    }
+
+    @include responsive767 {
+      width: 250px;
+      height: 150px;
+      margin-bottom: -20px;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    @include responsive1439 {
+      gap: 16px;
+    }
+  }
+
+  .btn {
+    max-width: 240px;
+    height: 50px;
+  }
+}

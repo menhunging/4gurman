@@ -41,7 +41,8 @@
   @include before {
     width: 500%;
     height: 100%;
-    background-color: $colorWhite;
+    // background-color: $colorWhite;
+    background-color: #f7f7f5;
     border-radius: 500px;
     right: -295px;
     z-index: -1;
@@ -154,10 +155,10 @@
 
   .consul-media {
     position: absolute;
-    left: 0;
-    top: calc(50% - 250px);
-    width: 394px;
-    height: 609px;
+    left: -50px;
+    top: calc(50% - 309px);
+    width: 474px;
+    height: 100%;
 
     @include responsive1199 {
       left: -110px;
@@ -187,6 +188,23 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .video-block-invis {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

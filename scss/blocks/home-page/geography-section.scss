@@ -3,10 +3,10 @@
   color: $colorWhite;
 
   .geography__map {
-    background-image: url("../../../img/geography-map.png");
+    background-image: url("../img/geography-map.png");
     background-image: image-set(
-      url("../../../img/geography-map.webp") type("image/webp"),
-      url("../../../img/geography-map.png") type("image/png")
+      url("../img/geography-map.webp") type("image/webp"),
+      url("../img/geography-map.png") type("image/png")
     );
     background-position: center;
     background-repeat: no-repeat;

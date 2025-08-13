@@ -509,6 +509,16 @@ $(document).ready(function () {
 
   // /sliders
 
+  if ($(".selectric").length > 0) {
+    $(".selectric").map(function () {
+      $(this).selectric({
+        // onOpen: function (element) {},
+        // onChange: function (element) {},
+        // onClose: function (element) {},
+      });
+    });
+  }
+
   // base
 
   if ($(".faq-list").length > 0) {
