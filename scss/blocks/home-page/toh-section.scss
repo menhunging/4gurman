@@ -1,0 +1,300 @@
+.toh-section {
+  position: relative;
+  border-bottom-left-radius: 400px;
+  overflow: hidden;
+  //   height: 1090px;
+  padding-top: calc(885 / 1920 * 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  &.toh-section--alternate {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 400px;
+
+    @include responsive1549 {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 300px;
+    }
+
+    @include responsive1439 {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 200px;
+    }
+
+    @include responsive1199 {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 100px;
+    }
+
+    @include responsive767 {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 70px;
+    }
+
+    .btn {
+      right: auto;
+      left: 200px;
+
+      @include responsive1439 {
+        left: 40px;
+      }
+
+      @include responsive1199 {
+        left: 20px;
+      }
+    }
+
+    .toh-section__media {
+      .caption {
+        text-align: right;
+      }
+    }
+  }
+
+  @include responsive1549 {
+    border-bottom-left-radius: 300px;
+  }
+
+  @include responsive1439 {
+    border-bottom-left-radius: 200px;
+  }
+
+  @include responsive1199 {
+    border-bottom-left-radius: 100px;
+  }
+
+  @include responsive767 {
+    border-bottom-left-radius: 70px;
+  }
+
+  .caption {
+    position: relative;
+    z-index: 3;
+    color: $colorWhite;
+    text-shadow: 0px 4px 4px $colorBlack-a3;
+    font-weight: 600;
+  }
+
+  .btn {
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    z-index: 3;
+    max-width: 490px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 50px;
+
+    @include responsive1799 {
+      max-width: 380px;
+    }
+
+    @include responsive1439 {
+      max-width: 300px;
+      right: 40px;
+      top: 40px;
+    }
+
+    @include responsive1199 {
+      max-width: 240px;
+      gap: 12px;
+      height: 40px;
+      right: 20px;
+    }
+
+    @include responsive767 {
+      max-width: 138px;
+      padding: 0 5px;
+      top: 20px;
+    }
+
+    @include after {
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='37' height='30' viewBox='0 0 37 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 28.1393V15.0001H35M35 15.0001L21.9492 1.86096M35 15.0001L21.9492 28.1393' stroke='%23525151' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      position: relative;
+      width: 33px;
+      height: 26px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include responsive767 {
+        width: 20px;
+        height: 16px;
+      }
+    }
+
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .toh-section__media {
+    width: 100%;
+    height: auto;
+
+    @include responsive1439 {
+      padding: 0 20px;
+    }
+
+    @include responsive1199 {
+      padding: 0 10px;
+    }
+  }
+
+  .toh-list {
+  }
+
+  .toh-item {
+    position: absolute;
+    z-index: 3;
+  }
+
+  .toh-circle {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='35' viewBox='0 0 36 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M35.3486 13.8542V20.4942H21.4286V34.4142H14.7886V20.4942H0.948594V13.8542H14.7886V0.0142336H21.4286V13.8542H35.3486Z' fill='%233A3A3A'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 62px;
+    height: 62px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    animation: pulse 5s infinite;
+    transition: all 0.3s;
+    background-color: $colorWhite;
+    background-size: 32px;
+    z-index: 3;
+
+    @include responsive1199 {
+      width: 33px;
+      height: 33px;
+      background-size: 15px;
+    }
+
+    @include responsive767 {
+      width: 12px;
+      height: 12px;
+      background-size: 8px;
+    }
+
+    &.active {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @include hover {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+
+  .toh-content {
+    transition: all 0.3s;
+    transform: scale(0);
+    pointer-events: none;
+    transform-origin: top center;
+    background-color: $colorWhite;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    width: 360px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    margin-left: -180px;
+    padding: 33px 16px;
+
+    @include responsive1549 {
+      font-size: 32px;
+      line-height: 34px;
+      width: 280px;
+      padding: 30px 16px;
+      margin-left: -140px;
+    }
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 28px;
+      width: 215px;
+      margin-left: -100px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+      width: 105px;
+      margin-left: -45px;
+      padding: 6px;
+    }
+
+    &.opened {
+      transform: scale(1);
+      pointer-events: initial;
+    }
+
+    .picture-block {
+      width: 174px;
+      height: 174px;
+      margin: 0 auto;
+      margin-bottom: 7px;
+      @include invisLink;
+
+      @include responsive1199 {
+        width: 135px;
+        height: 135px;
+      }
+
+      @include responsive767 {
+        width: 50px;
+        height: 50px;
+      }
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    a {
+      @include text-decoration-hover($colorBlack);
+    }
+
+    .toh-close {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.5 1L1.5 11M1.5 1L11.5 11' stroke='%23222222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 24px;
+      top: 24px;
+      transition: all 0.3s;
+      z-index: 3;
+
+      @include responsive767 {
+        right: 10px;
+        top: 14px;
+        width: 6px;
+        height: 6px;
+        background-size: contain;
+      }
+
+      @include hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .toh-section__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

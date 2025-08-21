@@ -28,6 +28,8 @@
 @import "blocks/home-page/news-main.scss";
 @import "blocks/home-page/teams-main.scss";
 @import "blocks/home-page/contacts-main.scss";
+@import "blocks/home-page/toh-section.scss";
+@import "blocks/home-page/our-brands.scss";
 
 // CATALOG PAGE
 @import "blocks/catalog-page/grettings-inner.scss";
@@ -53,6 +55,9 @@
 
 // 404 PAGE
 @import "blocks/404/404.scss";
+
+// ABOUT PAGE
+@import "blocks/about-page/about.scss";
 
 // BLOCKS
 @import "blocks";

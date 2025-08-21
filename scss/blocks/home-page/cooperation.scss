@@ -119,3 +119,21 @@
     }
   }
 }
+
+.cooperation {
+  & + .contacts-main {
+    margin-top: 80px;
+
+    @include responsive1199 {
+      margin-top: 50px;
+    }
+
+    @include responsive767 {
+      margin-top: 40px;
+    }
+
+    @include responsive639 {
+      margin-top: 30px;
+    }
+  }
+}

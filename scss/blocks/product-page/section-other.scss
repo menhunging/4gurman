@@ -1,21 +1,39 @@
 .section-other {
   .section-other__slider {
     margin-top: 40px;
+
+    @include responsive1549 {
+      margin-top: 32px;
+    }
+
+    @include responsive1199 {
+      margin-top: 24px;
+    }
   }
 }
 
 .section-other__slider {
-  .swiper {
-  }
-
-  .swiper-wrapper {
-  }
+  width: 100%;
 
   .swiper-slide {
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
-    letter-spacing: 0%;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   .picture-block {
@@ -25,6 +43,19 @@
     width: 100%;
     height: 236px;
     margin-bottom: 8px;
+
+    @include responsive1549 {
+      height: 200px;
+    }
+
+    @include responsive1439 {
+      height: 195px;
+    }
+
+    @include responsive1199 {
+      border-bottom-right-radius: 60px;
+      height: 145px;
+    }
 
     picture {
       display: flex;
@@ -39,6 +70,17 @@
       height: 137px;
       margin: 0 auto;
       position: relative;
+      object-fit: contain;
+
+      @include responsive1549 {
+        width: 200px;
+        height: 105px;
+      }
+
+      @include responsive1199 {
+        width: 123px;
+        height: 66px;
+      }
     }
   }
 }

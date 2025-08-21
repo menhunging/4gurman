@@ -189,6 +189,53 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".history-company__left").length > 0) {
+    $(".history-company__left li").on("click", function () {
+      let self = $(this);
+      let attr = `tb${self.attr("data-id")}`;
+
+      $(".history-company__left li").removeClass("active");
+      self.addClass("active");
+
+      $(".history-company .tab-content").removeClass("opened");
+      $(".history-company").find(`#${attr}`).addClass("opened");
+    });
+  }
+
+  if ($(".your-brand").length > 0) {
+    $(".your-brand__left li").on("click", function () {
+      let self = $(this);
+      let attr = `tab${self.attr("data-id")}`;
+
+      $(".your-brand__left li").removeClass("active");
+      self.addClass("active");
+
+      $(".your-brand__content").removeClass("opened");
+      $(`#${attr}`).addClass("opened");
+    });
+  }
+
+  if ($(".toh-section").length > 0) {
+    $(".toh-circle").on("click", function () {
+      let self = $(this);
+      let parents = self.parents(".toh-section");
+
+      parents.find(".toh-circle").removeClass("active");
+      parents.find(".toh-content").removeClass("active");
+
+      self.addClass("active");
+      self.next(".toh-content").addClass("opened");
+    });
+
+    $(".toh-close").on("click", function () {
+      let self = $(this);
+      let parents = self.parents(".toh-section");
+
+      parents.find(".toh-circle").removeClass("active");
+      parents.find(".toh-content").removeClass("opened");
+    });
+  }
+
   // sliders
   if ($(".grettingsSlider").length > 0) {
     const swiper = new Swiper(".grettingsSlider", {
@@ -396,11 +443,15 @@ $(document).ready(function () {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1.4,
+          slidesPerView: 1,
+          spaceBetween: 5,
+        },
+        390: {
+          slidesPerView: 2,
           spaceBetween: 5,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 4,
           spaceBetween: 17,
         },
         1440: {
@@ -505,6 +556,17 @@ $(document).ready(function () {
     }
 
     sliders.length && sliderinit();
+  }
+
+  if ($(".about-production__slider").length > 0) {
+    const swiper = new Swiper(".about-production__slider", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      navigation: {
+        prevEl: ".about-production__slider .swiperBtnPrev",
+        nextEl: ".about-production__slider .swiperBtnNext",
+      },
+    });
   }
 
   // /sliders

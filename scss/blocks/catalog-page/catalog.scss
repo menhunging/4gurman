@@ -329,6 +329,7 @@
       flex-direction: column;
       gap: 24px;
       transition: all 0.3s;
+      @include invisLink;
 
       @include responsive1199 {
         gap: 16px;
@@ -394,6 +395,7 @@
 
   @include responsive1023 {
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   .container {
@@ -435,6 +437,7 @@
 
 .catalog-content {
   width: calc(100% - 312px - 24px);
+  min-height: 550px;
 
   @include responsive1549 {
     width: calc(100% - 261px - 24px);
@@ -446,6 +449,7 @@
 
   @include responsive767 {
     width: 100%;
+    min-height: initial;
   }
 }
 

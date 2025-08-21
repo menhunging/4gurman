@@ -1,0 +1,109 @@
+.our-brands {
+  .title-section {
+    align-items: flex-end;
+  }
+
+  .caption {
+    color: #c4c4c3;
+  }
+
+  .our-brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px 110px;
+    margin-top: 50px;
+
+    @include responsive1549 {
+      gap: 24px 80px;
+      margin-top: 50px;
+    }
+
+    @include responsive1199 {
+      gap: 20px 45px;
+      margin-top: 40px;
+    }
+
+    @include responsive767 {
+      gap: 16 0;
+      margin-top: 23px;
+      justify-content: space-around;
+    }
+  }
+
+  .our-brands__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    width: calc(100% / 3 - 105px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include responsive1549 {
+      width: calc(100% / 3 - 55px);
+    }
+
+    @include responsive1199 {
+      width: calc(100% / 3 - 45px);
+    }
+
+    @include responsive1439 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      width: calc(100% / 2 - 45px);
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include responsive389 {
+      width: 100%;
+    }
+  }
+
+  .picture-block {
+    width: 240px;
+    height: 120px;
+    margin: 0 auto 15px;
+
+    @include responsive1439 {
+      width: 200px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(50 / 100 * 100%);
+    }
+
+    @include responsive389 {
+      width: 70%;
+      padding-top: calc(25 / 80 * 100%);
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .our-brands__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}

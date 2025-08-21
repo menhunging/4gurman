@@ -56,4 +56,41 @@
       z-index: 2;
     }
   }
+
+  .grettings-inner__desc {
+    color: $colorWhite;
+    position: relative;
+    z-index: 3;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    display: block;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include responsive1439 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include responsive1199 {
+      margin-top: 50px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    & + .caption {
+      max-width: 50%;
+
+      @include responsive1439 {
+        max-width: 100%;
+      }
+    }
+  }
 }

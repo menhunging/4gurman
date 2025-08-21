@@ -265,10 +265,10 @@
     transition: opacity 0.5s;
 
     &--small {
-      background-image: url("../../../img/paws1.png");
+      background-image: url("../img/paws1.png");
       background-image: image-set(
-        url("../../../img/paws1.webp") type("image/webp"),
-        url("../../../img/paws1.png") type("image/png")
+        url("../img/paws1.webp") type("image/webp"),
+        url("../img/paws1.png") type("image/png")
       );
       width: 60px;
       height: 60px;
@@ -281,10 +281,10 @@
     }
 
     &--big {
-      background-image: url("../../../img/paws2.png");
+      background-image: url("../img/paws2.png");
       background-image: image-set(
-        url("../../../img/paws2.webp") type("image/webp"),
-        url("../../../img/paws2.png") type("image/png")
+        url("../img/paws2.webp") type("image/webp"),
+        url("../img/paws2.png") type("image/png")
       );
       width: 70px;
       height: 70px;
