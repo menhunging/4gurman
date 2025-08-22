@@ -815,6 +815,10 @@
 
         &.active {
           box-shadow: 0px 0px 8px 0px #00000040;
+
+          .your-brand__caption {
+            color: $colorRed;
+          }
         }
 
         @include hover {
@@ -935,6 +939,23 @@
     @include responsive1439 {
       font-size: 18px;
       line-height: 20px;
+    }
+  }
+
+  .your-brand__title {
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 100%;
+    color: #c4c4c3;
+
+    @include responsive1439 {
+      font-size: 50px;
+      line-height: 70px;
+    }
+
+    @include responsive767 {
+      font-size: 26px;
+      line-height: 30px;
     }
   }
 }
@@ -1091,5 +1112,41 @@
     img {
       object-fit: contain;
     }
+  }
+}
+
+.your-brand__caption {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  color: #525151;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  transition: all 0.3s;
+  padding: 0 5px 0 25px;
+  text-decoration-skip-ink: none;
+
+  @include responsive1439 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @include responsive1199 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include responsive767 {
+    padding: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include hover {
+    text-decoration-color: transparent;
   }
 }
