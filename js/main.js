@@ -236,6 +236,26 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".brand-faq__list").length > 0) {
+    $(".brand-faq__item").on("click", function () {
+      let self = $(this);
+      let parents = $(this).parents(".brand-faq__list");
+
+      let isOpened = self.hasClass("opened");
+
+      parents
+        .find(".brand-faq__item")
+        .removeClass("opened")
+        .find(".brand-faq__content")
+        .stop()
+        .slideUp();
+
+      if (!isOpened) {
+        self.addClass("opened").find(".brand-faq__content").stop().slideDown();
+      }
+    });
+  }
+
   // sliders
   if ($(".grettingsSlider").length > 0) {
     const swiper = new Swiper(".grettingsSlider", {

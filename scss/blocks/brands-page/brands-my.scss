@@ -94,10 +94,10 @@
   line-height: 24px;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-image: url("../../../img/brand-name.png");
+  background-image: url("../img/brand-name.png");
   background-image: image-set(
-    url("../../../img/brand-name.webp") type("image/webp"),
-    url("../../../img/brand-name.png") type("image/png")
+    url("../img/brand-name.webp") type("image/webp"),
+    url("../img/brand-name.png") type("image/png")
   );
   min-height: 935px;
   position: relative;
@@ -671,10 +671,10 @@
     position: absolute;
     top: -70px;
     left: -50px;
-    background-image: url("../../../img/bg-brand1-best.png");
+    background-image: url("../img/bg-brand1-best.png");
     background-image: image-set(
-      url("../../../img/bg-brand1-best.webp") type("image/webp"),
-      url("../../../img/bg-brand1-best.png") type("image/png")
+      url("../img/bg-brand1-best.webp") type("image/webp"),
+      url("../img/bg-brand1-best.png") type("image/png")
     );
     opacity: 0.1;
     z-index: -1;
@@ -767,10 +767,10 @@
   min-height: 680px;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-image: url("../../../img/brand-name2.png");
+  background-image: url("../img/brand-name2.png");
   background-image: image-set(
-    url("../../../img/brand-name2.webp") type("image/webp"),
-    url("../../../img/brand-name2.png") type("image/png")
+    url("../img/brand-name2.webp") type("image/webp"),
+    url("../img/brand-name2.png") type("image/png")
   );
 
   @include responsive1799 {
@@ -851,10 +851,10 @@
 
 .brand-2-catalog {
   background-color: $colorWhite;
-  background-image: url("../../../img/bg-catalog-brand2.png");
+  background-image: url("../img/bg-catalog-brand2.png");
   background-image: image-set(
-    url("../../../img/bg-catalog-brand2.webp") type("image/webp"),
-    url("../../../img/bg-catalog-brand2.png") type("image/png")
+    url("../img/bg-catalog-brand2.webp") type("image/webp"),
+    url("../img/bg-catalog-brand2.png") type("image/png")
   );
   background-position: center;
 
@@ -1005,6 +1005,971 @@
 
     img {
       object-fit: contain;
+    }
+  }
+}
+
+.brand-2-best {
+  position: relative;
+  z-index: 2;
+  background-color: $colorWhite;
+
+  @include responsive767 {
+    padding-bottom: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @include after {
+    width: 50%;
+    right: 170px;
+    top: 0;
+    height: 100%;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg-brand-2-best.png");
+    background-image: image-set(
+      url("../img/bg-brand-2-best.webp") type("image/webp"),
+      url("../img/bg-brand-2-best.png") type("image/png")
+    );
+
+    @include responsive1549 {
+      right: 90px;
+    }
+
+    @include responsive1199 {
+      right: 150px;
+    }
+
+    @include responsive1023 {
+      right: 30px;
+    }
+
+    @include responsive767 {
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .picture-block {
+    width: 840px;
+    height: 600px;
+    position: absolute;
+    left: calc(50% - 990px);
+    top: calc(50% + 15px);
+    transform: translateY(-50%);
+
+    @include responsive1549 {
+      width: 730px;
+      height: 520px;
+      left: calc(50% - 770px);
+    }
+
+    @include responsive1439 {
+      width: 500px;
+      height: 411px;
+      left: calc(50% - 600px);
+      top: calc(50% + 65px);
+    }
+
+    @include responsive1199 {
+      left: calc(50% - 520px);
+      top: calc(50% + 117px);
+    }
+
+    @include responsive1023 {
+      left: calc(50% - 420px);
+      top: calc(50% + 87px);
+      width: 430px;
+      height: 291px;
+    }
+
+    @include responsive767 {
+      width: calc(100% + 32px);
+      height: auto;
+      top: auto;
+      left: -16px;
+      position: relative;
+      padding-top: calc(300 / 390 * 100%);
+      margin-top: 40px;
+      transform: initial;
+    }
+  }
+
+  .brand-2-best__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+    width: 700px;
+    margin: 60px 0 60px auto;
+
+    @include responsive1549 {
+      width: 500px;
+    }
+
+    @include responsive1199 {
+      width: 430px;
+    }
+
+    @include responsive1023 {
+      width: 380px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include responsive767 {
+      width: 90%;
+      gap: 16px;
+      padding-left: 15px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    @include responsive389 {
+      padding-left: 0;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include before {
+      width: 300%;
+      height: calc(100% + 120px);
+      box-shadow: 0px 0px 16px 0px $colorBlack-a2;
+      background-color: $colorWhite;
+      border-radius: 300px;
+      z-index: -1;
+      top: -60px;
+      left: -110px;
+
+      @include responsive767 {
+        left: -40px;
+        border-radius: 120px;
+        top: -40px;
+        height: calc(100% + 80px);
+      }
+
+      @include responsive389 {
+        border-radius: 100px;
+      }
+    }
+  }
+
+  .caption {
+  }
+}
+
+.brand-3-block {
+  position: relative;
+  overflow: hidden;
+  min-height: 815px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-image: url("../img/brand-name3.png");
+  background-image: image-set(
+    url("../img/brand-name3.webp") type("image/webp"),
+    url("../img/brand-name3.png") type("image/png")
+  );
+
+  @include responsive1549 {
+    min-height: 665px;
+    background-size: 70%;
+  }
+
+  @include responsive1439 {
+    min-height: 525px;
+    background-size: 60%;
+  }
+
+  @include responsive1023 {
+    min-height: 515px;
+  }
+
+  @include responsive767 {
+    min-height: 460px;
+  }
+
+  @include responsive389 {
+    min-height: 510px;
+  }
+
+  .container {
+  }
+
+  .brand-2-block__inner {
+    max-width: 990px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include responsive1699 {
+      max-width: 900px;
+    }
+
+    @include responsive1439 {
+      max-width: 730px;
+    }
+
+    @include responsive1199 {
+      max-width: 660px;
+    }
+
+    @include responsive1023 {
+      max-width: 480px;
+    }
+
+    p {
+      max-width: 630px;
+
+      @include responsive1439 {
+        max-width: 560px;
+      }
+
+      @include responsive1199 {
+        max-width: 450px;
+      }
+
+      @include responsive767 {
+        max-width: 67%;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .picture-block--one {
+    left: -200px;
+    bottom: -65px;
+    width: 880px;
+    height: 934px;
+
+    @include responsive1799 {
+      width: 740px;
+      height: 814px;
+    }
+
+    @include responsive1699 {
+      width: 680px;
+      height: 754px;
+    }
+
+    @include responsive1549 {
+      width: 600px;
+      height: 674px;
+      left: -160px;
+      bottom: -58px;
+    }
+
+    @include responsive1439 {
+      width: 500px;
+      height: 545px;
+      left: -160px;
+      bottom: -38px;
+    }
+
+    @include responsive1199 {
+      width: 410px;
+      height: 457px;
+      left: -130px;
+      bottom: -38px;
+    }
+
+    @include responsive1023 {
+      width: 320px;
+      height: 377px;
+      left: -120px;
+      bottom: -38px;
+    }
+
+    @include responsive767 {
+      width: 192px;
+      height: 211px;
+      left: -40px;
+      bottom: -11px;
+    }
+
+    @include responsive389 {
+      left: -50px;
+      bottom: -17px;
+    }
+  }
+
+  .picture-block--two {
+    right: 80px;
+    top: 170px;
+    width: 600px;
+    height: 370px;
+    mix-blend-mode: multiply;
+
+    @include responsive1799 {
+      width: 540px;
+      height: 320px;
+    }
+
+    @include responsive1699 {
+      width: 430px;
+      height: 270px;
+    }
+
+    @include responsive1549 {
+      top: 130px;
+    }
+
+    @include responsive1439 {
+      top: 190px;
+      width: 300px;
+      height: 190px;
+    }
+
+    @include responsive1199 {
+      top: 220px;
+      width: 260px;
+      height: 160px;
+    }
+
+    @include responsive1023 {
+      top: 201px;
+      width: 220px;
+      height: 120px;
+      right: 0px;
+    }
+
+    @include responsive767 {
+      top: calc(100% - 130px);
+      width: 115px;
+      height: 70px;
+      right: 10px;
+    }
+  }
+}
+
+.brand-faq {
+  position: relative;
+  z-index: 3;
+
+  &.brand-faq--alternate {
+    .picture-block {
+      right: auto;
+      left: -90px;
+
+      @include responsive767 {
+        left: -60px;
+      }
+    }
+
+    .container {
+      max-width: 890px;
+    }
+
+    .brand-faq__list {
+      @include responsive1799 {
+        transform: translateX(150px);
+      }
+
+      @include responsive1549 {
+        transform: translateX(210px);
+      }
+
+      @include responsive1439 {
+        transform: translateX(270px);
+      }
+
+      @include responsive767 {
+        transform: initial;
+        right: 0;
+        left: -16px;
+      }
+    }
+
+    .brand-faq__item {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 90px;
+      border-bottom-right-radius: 90px;
+
+      &.opened {
+        @include responsive1549 {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 60px;
+          border-bottom-right-radius: 60px;
+        }
+
+        @include responsive767 {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+
+      &.color1 {
+        background: linear-gradient(
+          269.95deg,
+          #c6631f -1.38%,
+          #c6631f 70.32%,
+          #ffffff 101.48%
+        );
+      }
+
+      &.color2 {
+        background: linear-gradient(
+          270deg,
+          #5e9fa7 0%,
+          #5e9fa7 70.01%,
+          #ffffff 102.55%
+        );
+      }
+
+      &.color3 {
+        background: linear-gradient(
+          270deg,
+          #a381a7 0%,
+          #a381a7 70.97%,
+          #ffffff 103.23%
+        );
+      }
+
+      &.color4 {
+        background: linear-gradient(
+          270deg,
+          #5dac5d 0%,
+          #5dac5d 73.78%,
+          #ffffff 106.58%
+        );
+      }
+
+      &.color5 {
+        background: linear-gradient(
+          270deg,
+          #ff8281 0%,
+          #ff8281 74.69%,
+          #ffffff 103.57%
+        );
+      }
+    }
+
+    .brand-faq__title {
+      flex-direction: row-reverse;
+    }
+
+    .brand-faq__name {
+      @include responsive767 {
+        top: calc(50% + 85px);
+        right: calc(50% - 145px);
+      }
+    }
+  }
+
+  .container {
+    @include responsive767 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .caption {
+    color: #c4c4c3;
+  }
+
+  .brand-faq__list {
+    max-width: 882px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+
+    @include responsive1549 {
+      max-width: 770px;
+    }
+
+    @include responsive1439 {
+      max-width: 600px;
+      gap: 24px;
+    }
+
+    @include responsive1199 {
+      max-width: 490px;
+      font-size: 16px;
+      line-height: 18px;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    @include responsive1023 {
+      max-width: 410px;
+    }
+
+    @include responsive767 {
+      right: -15px;
+      position: relative;
+      margin-top: 14px;
+    }
+  }
+
+  .brand-faq__item {
+    width: 100%;
+    box-shadow: 0px 8px 2px 0px #00000029;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    &.opened {
+      @include responsive1549 {
+        border-top-left-radius: 60px;
+        border-bottom-left-radius: 60px;
+      }
+
+      @include responsive767 {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+      }
+    }
+
+    &.color1 {
+      background: linear-gradient(
+        90deg,
+        #c6631f 0%,
+        #c6631f 69.71%,
+        #ffffff 100%
+      );
+    }
+
+    &.color2 {
+      background: linear-gradient(
+        90deg,
+        #a381a7 0%,
+        #a381a7 68.75%,
+        #ffffff 100%
+      );
+    }
+
+    &.color3 {
+      background: linear-gradient(
+        90deg,
+        #5dac5d 0%,
+        #5dac5d 69.23%,
+        #ffffff 100%
+      );
+    }
+
+    &.color4 {
+      background: linear-gradient(
+        90deg,
+        #ff8281 0%,
+        #ff8281 72.12%,
+        #ffffff 100%
+      );
+    }
+
+    &.color5 {
+      background: linear-gradient(
+        90deg,
+        #ff974d 0%,
+        #ff974d 74.52%,
+        #ffffff 100%
+      );
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+
+      @include responsive1549 {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+      }
+
+      @include responsive1199 {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+      }
+
+      img {
+      }
+    }
+  }
+
+  .brand-faq__title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    color: $colorWhite;
+    min-height: 117px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 30px;
+    cursor: pointer;
+
+    @include responsive1549 {
+      font-size: 30px;
+      line-height: 34px;
+      min-height: 100px;
+      gap: 16px;
+    }
+
+    @include responsive1199 {
+      font-size: 24px;
+      line-height: 28px;
+      min-height: 80px;
+    }
+
+    @include responsive1023 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  .caption {
+    @include responsive767 {
+      order: 1;
+    }
+  }
+
+  .brand-faq__content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 0 16px 142px;
+    display: none;
+
+    @include responsive1549 {
+      padding: 16px 16px 16px 105px;
+    }
+
+    @include responsive1023 {
+      padding: 16px 10px 16px 95px;
+    }
+
+    @include responsive767 {
+      padding: 16px 16px;
+    }
+
+    p {
+      max-width: 476px;
+
+      & + p {
+        margin-top: 7px;
+      }
+    }
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-color: $colorWhite-a8;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .picture-block {
+    width: 636px;
+    height: 688px;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    z-index: -1;
+
+    @include responsive1799 {
+      width: 546px;
+      height: 598px;
+    }
+
+    @include responsive1439 {
+      width: 496px;
+      height: 618px;
+      top: 100px;
+    }
+
+    @include responsive1199 {
+      width: 406px;
+      height: 488px;
+    }
+
+    @include responsive1023 {
+      width: 346px;
+      height: 398px;
+      top: 100px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      top: 0;
+      right: -30px;
+      width: 100%;
+      height: auto;
+      padding-top: calc(450 / 390 * 100%);
+      margin-bottom: -15px;
+      margin-top: 30px;
+      order: 0;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .brand-faq__name {
+    font-weight: 600;
+    font-size: 240px;
+    line-height: 90px;
+    color: rgba(189, 227, 178, 0.6);
+    position: absolute;
+    top: calc(100% - 15px);
+    right: 0;
+
+    @include responsive1799 {
+      font-size: 200px;
+    }
+
+    @include responsive1549 {
+      font-size: 170px;
+      top: calc(100% - 25px);
+    }
+
+    @include responsive1439 {
+      font-size: 130px;
+      right: 5px;
+    }
+
+    @include responsive1023 {
+      font-size: 110px;
+    }
+
+    @include responsive767 {
+      top: calc(50% + 75px);
+      right: calc(50% - 115px);
+    }
+
+    @include responsive389 {
+      font-size: 100px;
+    }
+  }
+}
+
+.brand-3-catalog {
+  position: relative;
+  z-index: 3;
+  background-color: $colorWhite;
+  min-height: 580px;
+
+  @include responsive1439 {
+    min-height: 430px;
+  }
+
+  .brand-3-catalog__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 860px;
+    margin-right: auto;
+
+    @include responsive1699 {
+      max-width: 860px;
+    }
+
+    @include responsive1549 {
+      max-width: 700px;
+    }
+
+    @include responsive1439 {
+      max-width: 670px;
+    }
+
+    @include responsive1199 {
+      max-width: 520px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .caption {
+      margin-bottom: 40px;
+
+      @include responsive1439 {
+      }
+
+      @include responsive1439 {
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      max-width: 727px;
+
+      & + p {
+        margin-top: 20px;
+
+        @include responsive1439 {
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 40px;
+
+      @include responsive1439 {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .picture-block {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    right: -20px;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsive1699 {
+      width: 600px;
+    }
+
+    @include responsive1549 {
+      width: 680px;
+      height: 380px;
+      right: -50px;
+    }
+
+    @include responsive1439 {
+      width: 550px;
+      height: 370px;
+    }
+
+    @include responsive1023 {
+      width: 400px;
+      height: 220px;
+      right: -50px;
+    }
+
+    @include responsive767 {
+      position: relative;
+      height: auto;
+      width: 100%;
+      right: -20px;
+      top: auto;
+      transform: initial;
+      padding-top: calc(288 / 350 * 100%);
+      margin-bottom: -40px;
+      z-index: -1;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.brand-3-best {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive767 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .brand-3-best__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 562px;
+
+    @include responsive1549 {
+      max-width: 442px;
+    }
+
+    @include responsive1199 {
+      max-width: 320px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .caption {
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      & + li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .picture-block {
+    width: 740px;
+    height: 420px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+
+    @include responsive1549 {
+      width: 647px;
+      height: 390px;
+    }
+
+    @include responsive1199 {
+      width: 492px;
+      height: 340px;
+    }
+
+    @include responsive767 {
+      width: 100%;
+      height: auto;
+      padding-top: calc(300 / 400 * 100%);
     }
   }
 }
