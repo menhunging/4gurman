@@ -1,0 +1,133 @@
+.gallery-main {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  @include before {
+    background-image: url("../img/bg-catalog-brand2.png");
+    background-image: image-set(
+      url("../img/bg-catalog-brand2.webp") type("image/webp"),
+      url("../img/bg-catalog-brand2.png") type("image/png")
+    );
+    width: 100%;
+    height: calc(100% + 20px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 5s;
+  }
+
+  &.aos-animate {
+    &::before {
+      opacity: 1;
+      top: -10px;
+    }
+
+    .picture-block {
+      picture {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .container {
+  }
+
+  .gallery-main__content {
+    width: 100%;
+    min-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @include responsive1549 {
+      min-height: 700px;
+    }
+  }
+
+  .gallery-main__caption {
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 90px;
+    color: #c4c4c3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include responsive1549 {
+      font-size: 90px;
+      line-height: 75px;
+      gap: 0;
+    }
+
+    .gallery-main__text {
+      display: block;
+
+      &:nth-child(1) {
+      }
+      &:nth-child(2) {
+        padding-left: 77px;
+      }
+      &:nth-child(3) {
+        padding-left: 220px;
+      }
+    }
+  }
+
+  .picture-block {
+    position: absolute;
+    overflow: hidden;
+
+    picture {
+      transition: all 5s;
+    }
+  }
+
+  .picture-block--one {
+    left: 290px;
+    bottom: 100px;
+    width: 320px;
+    height: 320px;
+
+    picture {
+      transform: translateX(50px);
+    }
+
+    @include responsive1549 {
+      width: 250px;
+      height: 250px;
+      bottom: 50px;
+    }
+  }
+
+  .picture-block--two {
+    right: 180px;
+    bottom: 150px;
+    width: 450px;
+    height: 450px;
+
+    @include responsive1549 {
+      width: 350px;
+      height: 350px;
+      bottom: 60px;
+    }
+
+    picture {
+      transform: translateX(-50px);
+    }
+  }
+
+  .gallery-main__txtbottom {
+    width: 360px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #525151;
+  }
+}

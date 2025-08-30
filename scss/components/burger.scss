@@ -11,6 +11,10 @@
 
   @include hover {
     transform: scale(0.95);
+
+    .burger__text {
+      color: $colorRed;
+    }
   }
 
   &.opened {
@@ -107,6 +111,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
+  transition: color 0.3s;
 
   @include responsive1199 {
     font-size: 14px;

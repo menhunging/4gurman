@@ -1,3 +1,13 @@
+addEventListener("scroll", (event) => {
+  currentScroll = $(window).scrollTop();
+
+  if (currentScroll > 0) {
+    $(".header").addClass("fixed");
+  } else {
+    $(".header").removeClass("fixed");
+  }
+});
+
 $(document).ready(function () {
   if ($(".burger").length > 0) {
     let burger = $(".burger");
@@ -261,8 +271,8 @@ $(document).ready(function () {
     const swiper = new Swiper(".grettingsSlider", {
       slidesPerView: 1,
       spaceBetween: 12,
-      // effect: "fade",
-      // fadeEffect: { crossFade: true },
+      effect: "fade",
+      fadeEffect: { crossFade: true },
       loop: true,
       autoplay: {
         delay: 3000,
@@ -587,6 +597,20 @@ $(document).ready(function () {
         nextEl: ".about-production__slider .swiperBtnNext",
       },
     });
+  }
+
+  if ($(".geography__toh").length > 0) {
+    const items = $(".geography__toh");
+    let activeClass = "active";
+    let interval = 3000;
+
+    setInterval(function () {
+      items.removeClass(activeClass);
+
+      let randomIndex = Math.floor(Math.random() * items.length);
+
+      items.eq(randomIndex).addClass(activeClass);
+    }, interval);
   }
 
   // /sliders

@@ -102,7 +102,7 @@
   }
 
   p {
-    width: 868px;
+    width: 768px;
     transition: ease-out 0.3s;
 
     @include responsive1549 {
@@ -128,21 +128,21 @@
 }
 
 .news-slider {
-  width: 760px;
+  width: 650px;
   overflow: visible;
   margin: 0;
   margin-top: 24px;
 
   @include responsive1549 {
-    width: 691px;
+    width: 550px;
   }
 
   @include responsive1439 {
-    width: 530px;
+    width: 450px;
   }
 
   @include responsive1199 {
-    width: 440px;
+    width: 342px;
   }
 
   @include responsive767 {
@@ -163,52 +163,61 @@
 
   .swiper-slide-next {
     .picture-block {
-      width: 446px;
-      height: 445px;
+      width: 536px;
+      height: 410px;
+      border-bottom-right-radius: 140px;
 
       @include responsive1549 {
-        width: 390px;
-        height: 389px;
+        width: 438px;
+        height: 329px;
       }
 
       @include responsive1439 {
-        width: 299px;
-        height: 298px;
+        width: 360px;
+        height: 274px;
+      }
+
+      @include responsive1199 {
+        width: 280px;
+        height: 214px;
       }
 
       @include responsive767 {
         height: auto;
-        padding-top: calc(194 / 316 * 100%);
+        padding-top: calc(204 / 316 * 100%);
       }
     }
 
     & + .swiper-slide {
-      transform: translateX(-316px);
+      transform: translateX(-114px);
+
+      @include responsive1439 {
+        transform: translateX(-88px);
+      }
 
       .picture-block {
-        width: 359px;
-        height: 327px;
+        width: 409px;
+        height: 304px;
 
         @include responsive1549 {
-          width: 314px;
-          height: 286px;
+          width: 324px;
+          height: 246px;
         }
 
         @include responsive1439 {
-          width: 241px;
-          height: 219px;
-          transform: translateX(83px);
+          width: 290px;
+          height: 215px;
         }
 
         @include responsive1199 {
-          width: 241px;
-          height: 219px;
-          transform: translateX(175px);
+          width: 242px;
+          height: 180px;
+          transform: translateX(26px);
         }
 
         @include responsive767 {
           height: auto;
-          padding-top: calc(194 / 316 * 100%);
+          padding-top: calc(204 / 316 * 100%);
         }
       }
     }
@@ -216,22 +225,27 @@
 
   .picture-block {
     width: 100%;
-    height: 509px;
+    height: 495px;
     overflow: hidden;
     border-bottom-right-radius: 200px;
     @include invisLink;
     transition: all 0.3s;
 
+    @include responsive1549 {
+      height: 415px;
+    }
+
     @include responsive1439 {
-      height: 354px;
+      height: 340px;
     }
 
     @include responsive1199 {
+      height: 270px;
       border-bottom-right-radius: 120px;
     }
 
     @include responsive767 {
-      padding-top: calc(215 / 316 * 100%);
+      padding-top: calc(244 / 316 * 100%);
       height: auto;
       border-bottom-right-radius: 80px;
     }

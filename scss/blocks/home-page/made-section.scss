@@ -97,6 +97,10 @@
         border-bottom-right-radius: 80px;
       }
     }
+    
+    img {
+      object-fit: contain;
+    }
 
     &:first-child {
     }

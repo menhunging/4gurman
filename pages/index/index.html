@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="../../libs/selectric/selectric.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
     <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 </head>
 
@@ -185,10 +185,39 @@
                 </div>
             </section>
 
-            <!-- <section class="gallery-main">
+            <section class="gallery-main" data-aos>
                 <div class="container">
+                    <div class="gallery-main__content">
+                        <span class="gallery-main__caption">
+                            <span class="gallery-main__text" data-aos="fade-right" data-aos-duration="2000"
+                                data-aos-delay="300">Все самое</span>
+                            <span class="gallery-main__text" data-aos="fade-right" data-aos-duration="2000"
+                                data-aos-delay="600">лучшее для </span>
+                            <span class="gallery-main__text" data-aos="fade-right" data-aos-duration="2000"
+                                data-aos-delay="900">ваших питомцев</span>
+                        </span>
+
+
+                        <div class="picture-block picture-block--one" data-aos="flip-left"
+                            data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                            <picture>
+                                <source type="image/webp" srcset="./../../img/pic-news.webp" />
+                                <img src="./../../img/pic-news.jpg" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="picture-block picture-block--two" data-aos="flip-right"
+                            data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                            <picture>
+                                <source type="image/webp" srcset="./../../img/pic-news.webp" />
+                                <img src="./../../img/pic-news.jpg" alt="">
+                            </picture>
+                        </div>
+
+                        <span class="gallery-main__txtbottom" data-aos="fade-up">Премиум качество на каждый день</span>
+                    </div>
                 </div>
-            </section> -->
+            </section>
 
             <section class="toh-section">
                 <div class="container">
@@ -424,7 +453,41 @@
                         </li>
                     </ul>
 
-                    <div class="geography__map"></div>
+                    <div class="geography__map">
+                        <ul class="geography__tohs">
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh active" data-title="Москва"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                            <li class="geography__toh"></li>
+                        </ul>
+                    </div>
 
                     <div class="geography-section__content">
                         <h3 class="caption caption--h3">Купить наши корма очень легко</h3>
@@ -437,14 +500,21 @@
 
 
                         <div class="geography-section__controls">
-                            <a href="#" class="geography-section__linkControls">
+                            <span class="geography-section__linkControls geography-section__linkControls--social">
 
                                 <span class="geography-section__linkControls__num">88</span>
 
                                 <span class="geography-section__linkControls__title">ИНТЕРНЕТ-МАГАЗИНОВ</span>
                                 <span class="geography-section__linkControls__txt">Приобретайте корма онлайн, не выходя
                                     из дома</span>
-                            </a>
+
+                                <span class="geography-section__social">
+                                    <a href="#" class="geography-ozon"></a>
+                                    <a href="#" class="geography-wb"></a>
+                                    <a href="#" class="geography-yandex"></a>
+                                </span>
+
+                            </span>
 
                             <a href="#" class="geography-section__linkControls">
 
@@ -1339,7 +1409,7 @@
 <script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
 <script src="../../libs/fancybox/fancybox.umd.js"></script>
 <script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
-<!-- <script src="../../libs/aos/aos.js"></script> -->
+<script src="../../libs/aos/aos.js"></script>
 <script src="../../js/main.js"></script>
 
 </html>

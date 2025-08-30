@@ -321,30 +321,30 @@
 
   .article-big-news__media {
     width: 890px;
-    height: 518px;
+    height: 658px;
     position: relative;
     border-bottom-right-radius: 100px;
     overflow: hidden;
 
     @include responsive1549 {
       width: 731px;
-      height: 488px;
+      height: 548px;
     }
 
     @include responsive1199 {
       width: 538px;
-      height: 312px;
+      height: 420px;
     }
 
     @include responsive1023 {
       width: 420px;
-      height: 290px;
+      height: 320px;
     }
 
     @include responsive767 {
       width: 100%;
       height: auto;
-      padding-top: calc(208 / 358 * 100%);
+      padding-top: calc(265 / 358 * 100%);
     }
 
     .picture-block {

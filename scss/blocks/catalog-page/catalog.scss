@@ -162,11 +162,12 @@
 
   .catalog-category__logo {
     position: relative;
-    width: auto;
-    height: auto;
+    width: 240px;
+    height: 120px;
 
     @include responsive1199 {
-      max-width: 160px;
+      width: 160px;
+      height: 100px;
     }
 
     @include responsive767 {
@@ -174,14 +175,13 @@
     }
 
     picture {
-      position: relative;
-      width: auto;
-      height: auto;
-
       img {
-        position: relative;
-        width: auto;
-        height: auto;
+        object-fit: contain;
+        object-position: left bottom;
+
+        @include responsive767 {
+          object-position: center;
+        }
       }
     }
   }
@@ -245,6 +245,8 @@
     @include responsive767 {
       min-width: initial;
       width: 100%;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 }
@@ -356,8 +358,8 @@
     }
 
     .picture-block {
-      width: 320px;
-      height: 213px;
+      width: 360px;
+      height: 295px;
       filter: grayscale(1);
 
       @include responsive1199 {
@@ -377,6 +379,7 @@
 
       img {
         object-fit: contain;
+        object-position: bottom;
       }
     }
 

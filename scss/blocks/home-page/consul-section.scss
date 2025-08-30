@@ -41,8 +41,7 @@
   @include before {
     width: 500%;
     height: 100%;
-    // background-color: $colorWhite;
-    background-color: #f7f7f5;
+    background-color: $colorWhite;
     border-radius: 500px;
     right: -295px;
     z-index: -1;
@@ -139,8 +138,8 @@
     }
   }
 
-  .check-block{
-    & + .check-block{
+  .check-block {
+    & + .check-block {
       margin-top: -20px;
     }
   }
@@ -162,18 +161,22 @@
   .consul-media {
     position: absolute;
     left: -50px;
-    top: calc(50% - 309px);
+    top: 0;
     width: 474px;
     height: 100%;
+    // left: -200px;
+    // top: calc(50% - 92px);
+    // width: 100%;
+    // height: 100%;
 
     @include responsive1199 {
-      left: -110px;
-      top: calc(50% - 270px);
+      left: -140px;
+      top: 0;
     }
 
     @include responsive1023 {
       left: -36px;
-      top: calc(50% - 230px);
+      top: 0;
       width: 340px;
       height: 550px;
     }
@@ -184,8 +187,8 @@
       left: 0;
       width: 100%;
       height: auto;
-      padding-top: calc(358 / 231 * 100%);
-      margin-bottom: -95px;
+      margin-bottom: 15px;
+      padding-top: calc(218 / 231 * 100%);
     }
 
     .picture-block {
@@ -203,6 +206,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: brightness(1) contrast(1.1) saturate(1.1);
 
       video {
         position: absolute;

@@ -43,6 +43,14 @@ body {
 
   &.simple-page {
     padding-top: 67px;
+
+    .header {
+      background-color: #525151;
+
+      &.fixed {
+        background-color: #3a3a3a;
+      }
+    }
   }
 }
 
@@ -912,13 +920,31 @@ section {
 
 .big-cat-section {
   width: 100%;
-  height: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 1045px;
   position: relative;
-  padding-top: calc(1009 / 1920 * 100%);
   padding-bottom: 0;
 
+  @include responsive1549 {
+    height: 750px;
+  }
+
+  @include responsive1439 {
+    height: 720px;
+  }
+
+  @include responsive1199 {
+    height: 530px;
+  }
+
+  @include responsive1023 {
+    height: 410px;
+  }
+
   @include responsive767 {
-    padding-top: calc(290 / 390 * 100%);
+    height: auto;
+    padding-top: calc(170 / 320 * 100%);
   }
 
   video {
@@ -959,5 +985,17 @@ section {
   }
   100% {
     box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes pulseGeografy {
+  0% {
+    box-shadow: 0 0 2px 0px rgba(204, 35, 42, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 5px 8px rgba(204, 35, 42, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 2px 0px rgba(204, 35, 42, 0.05);
   }
 }

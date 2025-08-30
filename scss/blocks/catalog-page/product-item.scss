@@ -94,7 +94,7 @@
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     min-height: 60px;
     @include text-decoration-hover($colorBlack);
 
