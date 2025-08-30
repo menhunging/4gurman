@@ -4111,6 +4111,11 @@ a.breadcrumbs__link::before {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .philosophy-section .container {
+    flex-direction: column;
+  }
+}
 .philosophy-section .title-section {
   width: 100%;
   margin-bottom: 60px;
@@ -4267,35 +4272,44 @@ a.breadcrumbs__link::before {
     line-height: 18px;
   }
 }
-.philosophy-section .picture-block {
+@media (max-width: 767px) {
+  .philosophy-section .twentytwenty-wrapper {
+    width: 100%;
+  }
+}
+.philosophy-section .twentytwenty-block {
   width: 699px;
   height: 704px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.philosophy-section .twentytwenty-block.load {
+  opacity: 1;
 }
 @media (max-width: 1549px) {
-  .philosophy-section .picture-block {
+  .philosophy-section .twentytwenty-block {
     width: 509px;
     height: 504px;
   }
 }
 @media (max-width: 1199px) {
-  .philosophy-section .picture-block {
+  .philosophy-section .twentytwenty-block {
     width: 379px;
     height: 374px;
     transform: translateX(40px);
   }
 }
 @media (max-width: 1023px) {
-  .philosophy-section .picture-block {
+  .philosophy-section .twentytwenty-block {
     transform: translateX(20px);
   }
 }
 @media (max-width: 767px) {
-  .philosophy-section .picture-block {
+  .philosophy-section .twentytwenty-block {
     margin-top: 24px;
     width: 100%;
-    height: auto;
     transform: translateX(0);
-    padding-top: 100%;
   }
 }
 

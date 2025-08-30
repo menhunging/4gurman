@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    @include responsive767 {
+      flex-direction: column;
+    }
   }
 
   .title-section {
@@ -162,9 +166,22 @@
     }
   }
 
-  .picture-block {
+  .twentytwenty-wrapper {
+    @include responsive767 {
+      width: 100%;
+    }
+  }
+
+  .twentytwenty-block {
     width: 699px;
     height: 704px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &.load {
+      opacity: 1;
+    }
 
     @include responsive1549 {
       width: 509px;
@@ -184,9 +201,7 @@
     @include responsive767 {
       margin-top: 24px;
       width: 100%;
-      height: auto;
       transform: translateX(0);
-      padding-top: calc(345 / 345 * 100%);
     }
   }
 }
