@@ -1,0 +1,688 @@
+.geography-section {
+  background-color: #525151;
+  color: $colorWhite;
+  overflow: hidden;
+
+  .geography__map {
+    position: relative;
+    background-image: url("../img/geography-map.png");
+    background-image: image-set(
+      url("../img/geography-map.webp") type("image/webp"),
+      url("../img/geography-map.png") type("image/png")
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1330px;
+    height: 670px;
+    margin: 0 auto;
+    margin-top: -160px;
+
+    @include responsive1549 {
+      transform: scale(0.8);
+      left: -115px;
+      margin-bottom: -95px;
+    }
+
+    @include responsive1439 {
+      transform: scale(0.8);
+      left: -115px;
+      margin-bottom: -95px;
+    }
+
+    @include responsive1199 {
+      transform: scale(0.7);
+      left: -235px;
+      margin-bottom: -135px;
+    }
+
+    @include responsive1023 {
+      transform: scale(0.55);
+      left: -295px;
+      margin-bottom: -185px;
+      margin-top: -210px;
+    }
+
+    @include responsive767 {
+      transform: scale(0.3) translateX(-530px);
+      margin-bottom: -255px;
+      margin-top: -300px;
+    }
+
+    @include responsive389 {
+    }
+  }
+
+  .geography-section__list {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    position: relative;
+    z-index: 3;
+
+    @include responsive1439 {
+      margin-top: 40px;
+    }
+
+    @include responsive767 {
+      margin-top: 24px;
+      gap: 20px;
+    }
+
+    li {
+      max-width: 312px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-width: 290px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.02em;
+
+      @include responsive1549 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @include responsive1199 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @include responsive767 {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    .data {
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 74px;
+
+      @include responsive1439 {
+        font-size: 54px;
+        line-height: 60px;
+      }
+
+      @include responsive1199 {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      @include responsive767 {
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.geography-section__content {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  gap: 22px;
+  align-items: center;
+  margin-top: 60px;
+
+  @include responsive1549 {
+    grid-template-columns: 1fr 550px;
+    gap: 24px;
+  }
+
+  @include responsive1439 {
+    grid-template-columns: 1fr 525px;
+  }
+
+  @include responsive1199 {
+    margin-top: 40px;
+  }
+
+  @include responsive1023 {
+    grid-template-columns: 1fr 445px;
+    gap: 12px;
+  }
+
+  @include responsive767 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include responsive389 {
+    margin-top: 24px;
+  }
+
+  .caption {
+    max-width: 460px;
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    grid-column: 1/2;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  a:not(.geography-section__linkControls) {
+    @include text-decoration-hover($colorWhite);
+  }
+
+  .geography-section__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    grid-column: 2/3;
+
+    @include responsive767 {
+      margin-top: 24px;
+    }
+  }
+
+  .geography-section__linkControls {
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    gap: 2px 23px;
+    padding: 10px 23px 18px;
+    background-color: #817a7a;
+    border-radius: 30px;
+    box-shadow: 0px 0px 16px 0px $colorBlack-a6;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    &.geography-section__linkControls--social {
+      &::after {
+        display: none;
+      }
+    }
+
+    @include responsive1549 {
+      gap: 0 16px;
+      grid-template-columns: 75px 1fr;
+      padding: 15px 23px 13px;
+    }
+
+    @include responsive1439 {
+      grid-template-columns: 65px 1fr;
+      gap: 0 8px;
+    }
+
+    @include responsive1023 {
+      padding-right: 95px;
+    }
+
+    @include responsive767 {
+      grid-template-columns: 40px 1fr;
+      padding: 10px 15px;
+      padding-right: 60px;
+      gap: 2px 8px;
+    }
+
+    @include before {
+      width: 33px;
+      height: 27px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='36' height='30' viewBox='0 0 36 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.5 28.2783V15.1392H34.5M34.5 15.1392L21.4492 2M34.5 15.1392L21.4492 28.2783' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s;
+
+      @include responsive767 {
+        width: 22px;
+        height: 17px;
+        background-size: contain;
+        right: 12px;
+      }
+    }
+
+    @include after {
+      width: 33px;
+      height: 27px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='44' height='30' viewBox='0 0 44 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 15.1392H42.5M42.5 15.1392L29.4492 2M42.5 15.1392L29.4492 28.2783' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.3s;
+
+      @include responsive767 {
+        width: 22px;
+        height: 17px;
+        background-size: contain;
+        right: 12px;
+      }
+    }
+
+    &:hover {
+      background-color: $colorRed;
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      .geography-section__social {
+        opacity: 1;
+        pointer-events: initial;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .geography-section__linkControls__num {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 42px;
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+
+    @include responsive1549 {
+      font-size: 32px;
+      line-height: 32px;
+      padding-top: 3px;
+    }
+
+    @include responsive1439 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include responsive767 {
+      font-size: 18px;
+      line-height: 20px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .geography-section__linkControls__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    grid-row: 1/2;
+
+    @include responsive1549 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include responsive1439 {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive767 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .geography-section__linkControls__txt {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 14px;
+    grid-row: 2/3;
+
+    @include responsive1549 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include responsive1199 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    @include responsive1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include responsive767 {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.geography__tohs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include responsive1549 {
+    top: 0px;
+    transform: scale(0.9);
+    left: -70px;
+    width: calc(100% + 125px);
+  }
+
+  .geography__toh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    // border: solid 1px $colorWhite;
+    border-radius: 50%;
+    transition: transform 3s, border 3s;
+
+    &.active {
+      border-color: $colorRed;
+      transform: scale(2);
+
+      &::before {
+        background-color: $colorRed;
+        animation: pulseGeografy 1.5s infinite;
+      }
+    }
+
+    @include before {
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: $colorWhite;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 3s;
+    }
+
+    &:nth-child(1) {
+      top: 336px;
+      left: 44px;
+    }
+    &:nth-child(2) {
+      top: 385px;
+      left: 84px;
+    }
+    &:nth-child(3) {
+      top: 408px;
+      left: 93px;
+    }
+    &:nth-child(4) {
+      top: 444px;
+      left: 63px;
+    }
+    &:nth-child(5) {
+      bottom: 179px;
+      left: 100px;
+      top: auto;
+    }
+    &:nth-child(6) {
+      bottom: 139px;
+      left: 50px;
+      top: auto;
+    }
+    &:nth-child(7) {
+      bottom: 59px;
+      left: 133px;
+      top: auto;
+    }
+    &:nth-child(8) {
+      bottom: 139px;
+      left: 171px;
+      top: auto;
+    }
+    &:nth-child(9) {
+      bottom: 189px;
+      left: 206px;
+      top: auto;
+    }
+    &:nth-child(10) {
+      bottom: 219px;
+      left: 126px;
+      top: auto;
+
+      // @include after {
+      //   content: attr(data-title);
+      //   position: absolute;
+      //   top: -15px;
+      //   left: calc(100% + 3px);
+      //   font-weight: 400;
+      //   font-size: 18px;
+      //   line-height: 24px;
+      //   letter-spacing: 0.02em;
+      //   background-color: $colorWhite-a6;
+      //   padding: 2px 10px;
+      //   border-radius: 6px;
+      // }
+    }
+    &:nth-child(11) {
+      bottom: 254px;
+      left: 157px;
+      top: auto;
+    }
+    &:nth-child(12) {
+      bottom: 254px;
+      left: 240px;
+      top: auto;
+    }
+    &:nth-child(13) {
+      top: 337px;
+      left: 219px;
+    }
+    &:nth-child(14) {
+      top: 363px;
+      left: 259px;
+    }
+    &:nth-child(15) {
+      top: 413px;
+      left: 388px;
+    }
+    &:nth-child(16) {
+      bottom: 181px;
+      left: 373px;
+      top: auto;
+    }
+    &:nth-child(17) {
+      top: 346px;
+      left: 497px;
+    }
+    &:nth-child(18) {
+      top: 315px;
+      left: 630px;
+    }
+    &:nth-child(19) {
+      top: 225px;
+      left: 698px;
+    }
+    &:nth-child(20) {
+      top: 295px;
+      left: 768px;
+    }
+    &:nth-child(21) {
+      top: 315px;
+      left: 876px;
+    }
+    &:nth-child(22) {
+      top: 237px;
+      left: 880px;
+    }
+    &:nth-child(23) {
+      top: 297px;
+      left: 1000px;
+    }
+    &:nth-child(24) {
+      top: 287px;
+      right: 290px;
+      left: auto;
+    }
+    &:nth-child(25) {
+      top: 347px;
+      right: 245px;
+      left: auto;
+    }
+    &:nth-child(26) {
+      top: 352px;
+      right: 150px;
+      left: auto;
+    }
+    &:nth-child(27) {
+      top: 279px;
+      right: 107px;
+      left: auto;
+    }
+    &:nth-child(28) {
+      top: auto;
+      left: auto;
+      right: 251px;
+      bottom: 182px;
+    }
+    &:nth-child(29) {
+      top: auto;
+      left: auto;
+      right: 251px;
+      bottom: 182px;
+    }
+    &:nth-child(30) {
+      top: auto;
+      left: auto;
+      right: 481px;
+      bottom: 142px;
+    }
+    &:nth-child(31) {
+      top: auto;
+      left: auto;
+      right: 575px;
+      bottom: 165px;
+    }
+  }
+}
+
+.geography-section__social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $colorWhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  transform: scale(0);
+  border-radius: 30px;
+  overflow: hidden;
+  transform-origin: right;
+
+  @include responsive1549 {
+    padding: 0 10px;
+  }
+
+  @include responsive1199 {
+    padding: 0 30px;
+  }
+
+  @include responsive1023 {
+    padding: 0 10px;
+  }
+
+  a {
+    width: 166px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border: solid 1px $colorBlack;
+    border-radius: 20px;
+    transition: all 0.3s !important;
+    background-color: $colorWhite;
+
+    @include responsive1199 {
+      width: 140px;
+      height: 46px;
+      background-size: 70%;
+    }
+
+    @include responsive1023 {
+      width: 130px;
+      height: 46px;
+    }
+
+    @include responsive767 {
+      width: 100px;
+      height: 36px;
+    }
+
+    @include responsive389 {
+      width: 80px;
+      height: 30px;
+    }
+
+    @include hover {
+      transform: scale(1.1);
+      filter: invert(1) brightness(2);
+    }
+  }
+
+  .geography-ozon {
+    background-image: url("../img/pic-ozon.png");
+    background-image: image-set(
+      url("../img/pic-ozon.webp") type("image/webp"),
+      url("../img/pic-ozon.png") type("image/png")
+    );
+  }
+
+  .geography-wb {
+    background-image: url("../img/pic-wb.png");
+    background-image: image-set(
+      url("../img/pic-wb.webp") type("image/webp"),
+      url("../img/pic-wb.png") type("image/png")
+    );
+  }
+
+  .geography-yandex {
+    background-image: url("../img/pic-yandex.png");
+    background-image: image-set(
+      url("../img/pic-yandex.webp") type("image/webp"),
+      url("../img/pic-yandex.png") type("image/png")
+    );
+  }
+}

@@ -1,0 +1,67 @@
+@import "./shared/values";
+@import "./shared/mixins";
+@import "./shared/reset";
+
+@import "base";
+
+// components
+@import "./components/btns";
+@import "./components/captions";
+@import "./components/modals";
+@import "./components/header";
+@import "./components/footer"; 
+@import "./components/burger";
+@import "./components/breadcrumbs";
+@import "./components/pagination";
+@import "./components/search-block";
+
+// HOME PAGE
+@import "blocks/home-page/grettings-main.scss";
+@import "blocks/home-page/gallery-main.scss";
+@import "blocks/home-page/geography-section.scss";
+@import "blocks/home-page/made-section.scss";
+@import "blocks/home-page/philosophy-section.scss";
+@import "blocks/home-page/cooperation.scss";
+@import "blocks/home-page/reviews.scss";
+@import "blocks/home-page/consul-section.scss";
+@import "blocks/home-page/sertificate.scss";
+@import "blocks/home-page/news-main.scss";
+@import "blocks/home-page/teams-main.scss";
+@import "blocks/home-page/contacts-main.scss";
+@import "blocks/home-page/toh-section.scss";
+@import "blocks/home-page/our-brands.scss";
+
+// CATALOG PAGE
+@import "blocks/catalog-page/grettings-inner.scss";
+@import "blocks/catalog-page/catalog.scss";
+@import "blocks/catalog-page/product-item.scss";
+@import "blocks/catalog-page/filter.scss";
+
+// PRODUCT PAGE
+@import "blocks/product-page/product.scss";
+@import "blocks/product-page/section-other.scss";
+
+// ARTICLES PAGE
+@import "blocks/articles-page/articles.scss";
+@import "blocks/articles-page/subscribe.scss";
+
+// CONTACTS PAGE
+@import "blocks/contacts-page/contacts.scss";
+@import "blocks/contacts-page/form-call.scss";
+
+// COOP PAGE
+@import "blocks/coop-page/coop.scss";
+@import "blocks/coop-page/call-section.scss";
+
+// 404 PAGE
+@import "blocks/404/404.scss";
+
+// ABOUT PAGE
+@import "blocks/about-page/about.scss";
+
+// BRANDS PAGE
+@import "blocks/brands-page/brands-my.scss";
+@import "blocks/brands-page/brands.scss"; // Дмитрий 3 бренда сделал отдельно
+
+// BLOCKS
+@import "blocks";

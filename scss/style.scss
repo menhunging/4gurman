@@ -9,10 +9,11 @@
 @import "./components/captions";
 @import "./components/modals";
 @import "./components/header";
-@import "./components/footer";
+@import "./components/footer"; 
 @import "./components/burger";
 @import "./components/breadcrumbs";
 @import "./components/pagination";
+@import "./components/search-block";
 
 // HOME PAGE
 @import "blocks/home-page/grettings-main.scss";
@@ -29,6 +30,7 @@
 @import "blocks/home-page/contacts-main.scss";
 @import "blocks/home-page/toh-section.scss";
 @import "blocks/home-page/our-brands.scss";
+@import "blocks/home-page/text-main.scss";
 
 // CATALOG PAGE
 @import "blocks/catalog-page/grettings-inner.scss";

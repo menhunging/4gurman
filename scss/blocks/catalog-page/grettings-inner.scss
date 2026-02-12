@@ -28,6 +28,11 @@
     color: $colorWhite;
     position: relative;
     z-index: 3;
+    max-width: 950px;
+
+    @include responsive1549 {
+      max-width: 800px;
+    }
   }
 
   .picture-block {

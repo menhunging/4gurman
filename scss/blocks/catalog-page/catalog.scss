@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 20px;
   padding: 0;
+  overflow: hidden;
 
   @include responsive1199 {
     font-size: 14px;
@@ -20,6 +21,20 @@
 
     @include responsive1549 {
       padding: 40px 0;
+    }
+
+    &:nth-child(4){
+      .catalog-category__logo{
+        width: 380px;
+
+        @include responsive1199 {
+          width: 280px;
+        }
+
+        @include responsive389 {
+          width: 240px;
+        }
+      }
     }
 
     .container {
@@ -42,6 +57,7 @@
       z-index: -1;
       bottom: -7px;
       left: 0;
+      transition: transform 0.3s;
 
       @include responsive1549 {
         width: 90%;
@@ -98,11 +114,22 @@
         }
       }
     }
+
+    @include hover {
+      .catalog-category__media {
+        transform: scale(1.2);
+      }
+
+      .icon-brand {
+        animation: pulseScaleFade2 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+      }
+    }
   }
 
   .catalog-category__media {
     width: 430px;
     height: 450px;
+    transition: transform 0.3s;
 
     @include responsive1549 {
       width: 382px;
@@ -211,6 +238,7 @@
   .catalog-category__controls {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     gap: 16px;
 
     @include responsive1199 {
@@ -247,6 +275,13 @@
       width: 100%;
       padding-left: 5px;
       padding-right: 5px;
+    }
+  }
+
+  .btn--dark {
+    @include hover {
+      transform: scale(1.05);
+      border-radius: 20px;
     }
   }
 }
@@ -395,6 +430,7 @@
 
 .catalog__body {
   margin-top: 30px;
+  margin-bottom: 30px;
 
   @include responsive1023 {
     margin-top: 16px;
@@ -405,6 +441,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 24px;
 
     @include responsive1199 {

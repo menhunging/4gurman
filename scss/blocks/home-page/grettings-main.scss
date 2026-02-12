@@ -33,9 +33,6 @@
   position: relative;
   margin-bottom: -3px;
 
-  .swiper-wrapper {
-  }
-
   .swiper-slide {
     position: relative;
     min-height: 844px;
@@ -77,30 +74,19 @@
 
   .picture-block {
     position: absolute;
-    left: calc(50% - 660px);
-    bottom: -5px;
-    width: 1560px;
-    height: 720px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
 
     @include responsive1549 {
-      width: 1100px;
-      height: 510px;
-      left: calc(50% - 460px);
     }
 
     @include responsive1199 {
-      width: 1049px;
-      height: 410px;
-      left: calc(50% - 430px);
-      bottom: 0px;
     }
 
     @include responsive767 {
-      width: 430px;
-      height: 260px;
-      left: calc(50% - 210px);
-      bottom: 0px;
     }
 
     picture {
@@ -121,13 +107,24 @@
     text-align: center;
     width: 100px;
     position: absolute;
-    right: 0;
+    // right: 0;
+    left: calc(50% + 550px);
     top: calc(50% - 55px);
     z-index: 3;
+
+    @include responsive1549 {
+      left: calc(50% + 450px);
+    }
 
     @include responsive1199 {
       font-size: 18px;
       line-height: 20px;
+      left: calc(50% + 310px);
+    }
+
+    @include responsive1023 {
+      left: auto;
+      right: 20px;
     }
 
     @include responsive767 {
@@ -210,9 +207,10 @@
         opacity: 0;
       }
 
+      &.swiper-pagination-bullet-init,
       &.swiper-pagination-bullet-active {
         &::before {
-          transition: width 3s;
+          transition: width 6s;
           opacity: 1;
           width: 100%;
         }
@@ -326,7 +324,6 @@
 
   @include hover {
     color: $colorRed;
-    transform: scale(1.1);
 
     &::before {
       transform: scale(0.5);

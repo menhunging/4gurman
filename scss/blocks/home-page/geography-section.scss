@@ -1,6 +1,7 @@
 .geography-section {
   background-color: #525151;
   color: $colorWhite;
+  overflow: hidden;
 
   .geography__map {
     position: relative;
@@ -44,7 +45,7 @@
 
     @include responsive767 {
       transform: scale(0.3) translateX(-530px);
-      margin-bottom: -275px;
+      margin-bottom: -255px;
       margin-top: -300px;
     }
 
@@ -359,28 +360,28 @@
 
   .geography-section__linkControls__txt {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 14px;
+    font-size: 15px;
+    line-height: 16px;
     grid-row: 2/3;
 
     @include responsive1549 {
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 14px;
+      line-height: 16px;
     }
 
     @include responsive1199 {
-      font-size: 15px;
-      line-height: 20px;
+      font-size: 13px;
+      line-height: 16px;
     }
 
     @include responsive1023 {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 12px;
+      line-height: 14px;
     }
 
     @include responsive767 {
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 11px;
+      line-height: 14px;
     }
   }
 }
@@ -395,8 +396,8 @@
   @include responsive1549 {
     top: 0px;
     transform: scale(0.9);
-    left: -58px;
-    width: calc(100% + 135px);
+    left: -70px;
+    width: calc(100% + 125px);
   }
 
   .geography__toh {
@@ -407,7 +408,9 @@
     height: 20px;
     // border: solid 1px $colorWhite;
     border-radius: 50%;
-    transition: transform 3s, border 3s;
+    transition:
+      transform 3s,
+      border 3s;
 
     &.active {
       border-color: $colorRed;

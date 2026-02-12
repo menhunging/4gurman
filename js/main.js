@@ -246,7 +246,7 @@ $(document).ready(function () {
       let parents = self.parents(".toh-section");
 
       parents.find(".toh-circle").removeClass("active");
-      parents.find(".toh-content").removeClass("active");
+      parents.find(".toh-content").removeClass("opened");
 
       self.addClass("active");
       self.next(".toh-content").addClass("opened");
@@ -283,6 +283,8 @@ $(document).ready(function () {
 
   // sliders
   if ($(".grettingsSlider").length > 0) {
+    let delaySwiper = 6000; // время переключения слайдов
+
     const swiper = new Swiper(".grettingsSlider", {
       slidesPerView: 1,
       spaceBetween: 12,
@@ -290,7 +292,7 @@ $(document).ready(function () {
       fadeEffect: { crossFade: true },
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: delaySwiper,
         disableOnInteraction: false,
       },
       navigation: {
@@ -299,6 +301,24 @@ $(document).ready(function () {
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        init: function () {
+          const firstSwiperBullet = $(
+            ".grettingsSlider .swiper-pagination-bullet",
+          ).eq(0);
+
+          firstSwiperBullet.removeClass("swiper-pagination-bullet-active");
+
+          setTimeout(function () {
+            firstSwiperBullet.addClass("swiper-pagination-bullet-init");
+          }, 300);
+
+          setTimeout(function () {
+            firstSwiperBullet.removeClass("swiper-pagination-bullet-init");
+          }, delaySwiper);
+        },
       },
       breakpoints: {
         0: {
@@ -327,6 +347,9 @@ $(document).ready(function () {
     const swiper = new Swiper(".teams-slider", {
       slidesPerView: 3,
       spaceBetween: 25,
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         prevEl: ".teams-slider .swiperBtnPrev",
         nextEl: ".teams-slider .swiperBtnNext",
@@ -438,18 +461,28 @@ $(document).ready(function () {
   if ($(".sliderMade").length > 0) {
     const swiper = new Swiper(".sliderMade", {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 24,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
+      },
+      speed: 1000,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
       },
       breakpoints: {
         0: {
           slidesPerView: 1.4,
           spaceBetween: 5,
+          slidesPerGroup: 1,
         },
         768: {
           slidesPerView: 2,
           spaceBetween: 17,
+          slidesPerGroup: 2,
         },
         1440: {
           slidesPerView: 2,
@@ -460,10 +493,35 @@ $(document).ready(function () {
   }
 
   if ($(".product-info__big").length > 0) {
+    const slideElements = document.querySelectorAll(
+      ".product-info__small .swiper-slide",
+    );
+
+    const slideCount = slideElements.length;
+
+    switch (slideCount) {
+      case 1:
+        $(".product-info__small").addClass("hidden");
+        break;
+      case 2:
+      case 3:
+        $(".product-info__small").addClass("smallSlide");
+        break;
+      default:
+        break;
+    }
+
     const sliderSmall = new Swiper(".product-info__small", {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 10,
       watchSlidesProgress: true,
+      on: {
+        init: function () {
+          if (!$(".product-info__small").hasClass("hidden")) {
+            $(".product-info__small").addClass("visible");
+          }
+        },
+      },
     });
 
     const sliderBig = new Swiper(".product-info__big", {
@@ -640,107 +698,232 @@ $(document).ready(function () {
     });
   }
 
-  // base
+  if ($(".btn-up").length > 0) {
+    $(window).on("scroll", function () {
+      let footer = $(".footer");
+      let button = $(".btn-up");
+      let footerOffset = footer.offset().top;
+      let windowHeight = $(window).height();
+      let scrollPosition = $(window).scrollTop() + windowHeight;
 
-  if ($(".faq-list").length > 0) {
-    $(".faq-section__quest").on("click", function () {
-      if ($(this).hasClass("active")) {
-        $(this).removeClass("active");
-        $(this).parents(".faq-item").removeClass("opened");
-        $(this).next(".faq-section__answer").stop().slideUp();
+      if ($(window).scrollTop() > 500 && scrollPosition < footerOffset) {
+        button.addClass("visible");
       } else {
-        $(".faq-item").removeClass("opened");
-        $(".faq-section__quest").removeClass("active");
-        $(".faq-section__answer").stop().slideUp();
+        button.removeClass("visible");
+      }
+    });
 
-        $(this).parents(".faq-item").addClass("opened");
-        $(this).addClass("active");
-        $(this).next(".faq-section__answer").stop().slideDown();
+    $(".btn-up").on("click", function (event) {
+      event.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, 300);
+    });
+  }
+
+  if ($(".search-block").length > 0) {
+    const btn = $(".search-block .search-block__icon");
+    const parents = btn.parents(".search-block");
+    const input = parents.find("input");
+    const btnClearInput = parents.find(".btn-clear-search");
+
+    btn.on("click", () => {
+      parents.toggleClass("opened");
+      input.focus();
+    });
+
+    btnClearInput.on("click", () => {
+      parents.removeClass("opened");
+      input.val("");
+    });
+
+    $(document).mouseup(function (e) {
+      if (!parents.is(e.target) && parents.has(e.target).length === 0) {
+        parents.removeClass("opened");
+        input.val("");
       }
     });
   }
 
-  if ($(".subcategories-slider").length > 0) {
-    const sliders = document.querySelectorAll(".subcategories-slider");
-    let mySwipers = [];
+  if ($(".flavor-options").length > 0) {
+    const list = $(".flavor-options");
+    const items = list.find("li");
+    const maxVisible = 7;
 
-    function sliderinit() {
-      sliders.forEach((slider, index) => {
-        let navNext = undefined;
-        let navPrev = undefined;
+    if (items.length > maxVisible) {
+      items.slice(3).hide();
 
-        if (!slider.swiper) {
-          navNext = $(slider)
-            .parents(".subcategories")
-            .find(".btnSwiperNext")[0];
-          navPrev = $(slider)
-            .parents(".subcategories")
-            .find(".btnSwiperPrev")[0];
+      const toggleItem = $("<li class='flavor-options__more'></li>");
+      list.append(toggleItem);
 
-          mySwipers[index] = new Swiper(slider, {
-            slidesPerView: 3,
-            spaceBetween: 24,
-            navigation: {
-              nextEl: navNext && navNext,
-              prevEl: navPrev && navPrev,
-            },
-            breakpoints: {
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 16,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 16,
-              },
-              1280: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-              },
-            },
-          });
+      toggleItem.on("click", function () {
+        const hiddenItems = items.slice(3);
+        const isHidden = hiddenItems.first().is(":hidden");
+
+        if (isHidden) {
+          hiddenItems.show();
+          toggleItem.removeClass("hide").addClass("show").text("Скрыть");
         } else {
-          return;
+          console.log("hide");
+          hiddenItems.hide();
+          toggleItem.removeClass("show").addClass("hide").text("");
         }
       });
     }
 
-    sliders.length && sliderinit();
+    setTimeout(function () {
+      $(".flavor-options").addClass("load");
+    }, 300);
   }
 
-  if ($(".sort-block").length > 0) {
-    $(".sort-block").on("click", function () {
-      if ($(this).hasClass("opened")) {
-        $(this)
-          .removeClass("opened")
-          .find(".sort-block__list")
-          .stop()
-          .slideUp();
-      } else {
-        let self = $(this);
+  if ($(".gallery-main").length > 0) {
+    let interval = null;
 
-        self.addClass("opened").find(".sort-block__list").stop().slideDown();
+    if ($(window).width() > 767) {
+      clearInterval(interval);
 
-        $(document).mouseup(function (e) {
-          if (!self.is(e.target) && self.has(e.target).length === 0) {
-            self
-              .removeClass("opened")
-              .find(".sort-block__list")
-              .stop()
-              .slideUp();
-          }
-        });
+      $(".gallery-main__left").hover(
+        function () {
+          $(".gallery-main__right").removeClass("hover").addClass("hovering");
+          $(".gallery-main__left").addClass("hover");
+        },
+        function () {
+          $(".gallery-main__right").removeClass("hovering");
+          $(".gallery-main__left").removeClass("hover");
+        },
+      );
+
+      $(".gallery-main__right").hover(
+        function () {
+          $(".gallery-main__left").removeClass("hover").addClass("hovering");
+          $(".gallery-main__right").addClass("hover");
+        },
+        function () {
+          $(".gallery-main__left").removeClass("hovering");
+          $(".gallery-main__right").removeClass("hover");
+        },
+      );
+    } else {
+      let leftBlock = $(".gallery-main__left");
+      let rightBlock = $(".gallery-main__right");
+      let isLeftVisible = true;
+
+      function toggleBlocks() {
+        if (isLeftVisible) {
+          leftBlock.addClass("visible");
+          rightBlock.removeClass("visible");
+        } else {
+          rightBlock.addClass("visible");
+          leftBlock.removeClass("visible");
+        }
+
+        isLeftVisible = !isLeftVisible;
       }
-    });
+
+      toggleBlocks();
+      interval = setInterval(toggleBlocks, 5000);
+    }
   }
 
-  if ($(".tabs").length > 0) {
-    $(".tabs").tabslet({
-      mouseevent: "click",
-      attribute: "href",
-      animation: true,
-    });
-  }
+  // base
+
+  // if ($(".faq-list").length > 0) {
+  //   $(".faq-section__quest").on("click", function () {
+  //     if ($(this).hasClass("active")) {
+  //       $(this).removeClass("active");
+  //       $(this).parents(".faq-item").removeClass("opened");
+  //       $(this).next(".faq-section__answer").stop().slideUp();
+  //     } else {
+  //       $(".faq-item").removeClass("opened");
+  //       $(".faq-section__quest").removeClass("active");
+  //       $(".faq-section__answer").stop().slideUp();
+
+  //       $(this).parents(".faq-item").addClass("opened");
+  //       $(this).addClass("active");
+  //       $(this).next(".faq-section__answer").stop().slideDown();
+  //     }
+  //   });
+  // }
+
+  // if ($(".subcategories-slider").length > 0) {
+  //   const sliders = document.querySelectorAll(".subcategories-slider");
+  //   let mySwipers = [];
+
+  //   function sliderinit() {
+  //     sliders.forEach((slider, index) => {
+  //       let navNext = undefined;
+  //       let navPrev = undefined;
+
+  //       if (!slider.swiper) {
+  //         navNext = $(slider)
+  //           .parents(".subcategories")
+  //           .find(".btnSwiperNext")[0];
+  //         navPrev = $(slider)
+  //           .parents(".subcategories")
+  //           .find(".btnSwiperPrev")[0];
+
+  //         mySwipers[index] = new Swiper(slider, {
+  //           slidesPerView: 3,
+  //           spaceBetween: 24,
+  //           navigation: {
+  //             nextEl: navNext && navNext,
+  //             prevEl: navPrev && navPrev,
+  //           },
+  //           breakpoints: {
+  //             0: {
+  //               slidesPerView: 1,
+  //               spaceBetween: 16,
+  //             },
+  //             640: {
+  //               slidesPerView: 2,
+  //               spaceBetween: 16,
+  //             },
+  //             1280: {
+  //               slidesPerView: 3,
+  //               spaceBetween: 24,
+  //             },
+  //           },
+  //         });
+  //       } else {
+  //         return;
+  //       }
+  //     });
+  //   }
+
+  //   sliders.length && sliderinit();
+  // }
+
+  // if ($(".sort-block").length > 0) {
+  //   $(".sort-block").on("click", function () {
+  //     if ($(this).hasClass("opened")) {
+  //       $(this)
+  //         .removeClass("opened")
+  //         .find(".sort-block__list")
+  //         .stop()
+  //         .slideUp();
+  //     } else {
+  //       let self = $(this);
+
+  //       self.addClass("opened").find(".sort-block__list").stop().slideDown();
+
+  //       $(document).mouseup(function (e) {
+  //         if (!self.is(e.target) && self.has(e.target).length === 0) {
+  //           self
+  //             .removeClass("opened")
+  //             .find(".sort-block__list")
+  //             .stop()
+  //             .slideUp();
+  //         }
+  //       });
+  //     }
+  //   });
+  // }
+
+  // if ($(".tabs").length > 0) {
+  //   $(".tabs").tabslet({
+  //     mouseevent: "click",
+  //     attribute: "href",
+  //     animation: true,
+  //   });
+  // }
 
   if ($("[data-aos]").length > 0) {
     if ($(window).width() < 1280) {
@@ -754,4 +937,40 @@ $(document).ready(function () {
     }
   }
   // /base
+});
+
+// cookies
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+    let date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function getCookie(name) {
+  let cookieArr = document.cookie.split("; ");
+  for (let cookie of cookieArr) {
+    let [cookieName, cookieValue] = cookie.split("=");
+    if (cookieName === name) return cookieValue;
+  }
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let notificationBlock = document.getElementById("notification-cookie");
+  let closeBtn = document.getElementById("notification-cookie__btn");
+
+  if (getCookie("notificationGURMAN")) {
+    notificationBlock.style.display = "none";
+  } else {
+    notificationBlock.style.display = "flex";
+  }
+
+  closeBtn.addEventListener("click", function () {
+    notificationBlock.style.display = "none";
+    setCookie("notificationGURMAN", "true", 30); // Запоминаем на 30 дней
+  });
 });
