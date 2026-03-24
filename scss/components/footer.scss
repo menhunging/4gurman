@@ -294,7 +294,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 70px;
+    grid-template-columns: 1fr 1fr 200px;
     align-items: center;
     gap: 16px;
 
@@ -312,10 +312,11 @@
   grid-column: 3/3;
   grid-row: 1/2;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: self-start;
+  flex-direction: row-reverse;
   margin-top: auto;
   margin-left: auto;
+  gap: 10px;
 
   @include responsive1199 {
   }
@@ -339,6 +340,7 @@
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='66' height='20' viewBox='0 0 66 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.4063 0H0V19.661H2.75V11.3559H10.6562L12.7188 9.32203V8.30509H2.75V2.88136H13.4063V0Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.8516 20C23.696 20 26.8125 17.0405 26.8125 13.3898C26.8125 9.73914 23.696 6.77966 19.8516 6.77966C16.0071 6.77966 12.8906 9.73914 12.8906 13.3898C12.8906 17.0405 16.0071 20 19.8516 20ZM19.8516 17.6271C22.2721 17.6271 24.2344 15.73 24.2344 13.3898C24.2344 11.0496 22.2721 9.15254 19.8516 9.15254C17.431 9.15254 15.4688 11.0496 15.4688 13.3898C15.4688 15.73 17.431 17.6271 19.8516 17.6271Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M59.0391 20C62.8835 20 66 17.0405 66 13.3898C66 9.73914 62.8835 6.77966 59.0391 6.77966C55.1946 6.77966 52.0781 9.73914 52.0781 13.3898C52.0781 17.0405 55.1946 20 59.0391 20ZM59.0391 17.6271C61.4596 17.6271 63.4219 15.73 63.4219 13.3898C63.4219 11.0496 61.4596 9.15254 59.0391 9.15254C56.6185 9.15254 54.6563 11.0496 54.6563 13.3898C54.6563 15.73 56.6185 17.6271 59.0391 17.6271Z' fill='white'/%3e%3cpath d='M31.625 7.11864H28.875V17.7966L30.7656 19.661H40.2188V7.11864H37.125V16.9492H31.625V7.11864Z' fill='white'/%3e%3cpath d='M46.0625 7.11864H43.1406V19.661H46.0625V11.6949L50.0156 9.49153H52.0781V7.11864H48.9844L46.0625 8.81356V7.11864Z' fill='white'/%3e%3c/svg%3e ");
     background-position: center;
     background-repeat: no-repeat;
+    min-width: 66px;
     width: 66px;
     height: 20px;
     transition: transform 0.3s;
@@ -385,6 +387,7 @@
     text-decoration: underline;
     transition: text-decoration 0.3s;
     text-underline-offset: 4px;
+    line-height: 20px;
 
     &:hover {
       text-decoration-color: transparent;

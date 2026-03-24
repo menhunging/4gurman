@@ -42,10 +42,18 @@ body {
   }
 
   &.simple-page {
-    padding-top: 68px;
+    padding-top: 63px;
+
+    @include responsive1199 {
+      padding-top: 58px;
+    }
+
+    @include responsive1023 {
+      padding-top: 53px;
+    }
 
     @include responsive767 {
-      padding-top: 62px;
+      padding-top: 48px;
     }
 
     .header {
@@ -695,8 +703,8 @@ section {
   }
 
   @include responsive767 {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .caption {
@@ -852,7 +860,11 @@ section {
   .marketplace__list {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
+
+    @include responsive1023 {
+      gap: 15px 12px;
+    }
 
     @include responsive389 {
       flex-wrap: wrap;
@@ -1084,6 +1096,8 @@ section {
         position: relative;
         display: block;
         transition: transform 0.3s;
+        border-radius: 15px;
+        overflow: hidden;
 
         .picture-block {
           position: absolute;

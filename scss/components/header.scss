@@ -39,8 +39,8 @@
   align-items: center;
   gap: 24px;
 
-  .header-markets{
-    display: none!important;
+  .header-markets {
+    display: none !important;
   }
 }
 
@@ -361,7 +361,7 @@
   .menu-invis__content {
     display: flex;
     flex-wrap: wrap;
-    gap: 0 80px;
+    gap: 0 60px;
     margin-top: 60px;
 
     @include responsive1549 {
@@ -425,13 +425,17 @@
 
     & + .menu-invis__ul {
       border-right: 0;
-      width: 250px;
+      width: 380px;
 
       @include responsive1549 {
-        width: 300px;
+        width: 350px;
       }
 
       @include responsive767 {
+        width: 230px;
+      }
+
+      @include responsive479 {
         width: 150px;
       }
 

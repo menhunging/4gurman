@@ -237,6 +237,11 @@
       border-width: 1px !important;
     }
 
+    @include responsive389 {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
     @include hover {
       box-shadow: 0px 4px 16px 0px #00000040;
 
@@ -898,7 +903,7 @@
     overflow: hidden;
 
     @include responsive1199 {
-      border-bottom-right-radius: 180px;
+      border-bottom-right-radius: 60px;
     }
 
     @include responsive767 {

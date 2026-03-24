@@ -1272,9 +1272,9 @@
 
   .picture-block--one {
     left: -200px;
-    bottom: -65px;
-    width: 880px;
-    height: 934px;
+    bottom: 0px;
+    width: 820px;
+    height: 824px;
     pointer-events: none;
 
     @include responsive1799 {
@@ -1290,41 +1290,41 @@
     @include responsive1549 {
       width: 600px;
       height: 674px;
-      left: -160px;
-      bottom: -58px;
+      left: -220px;
+      bottom: 2px;
     }
 
     @include responsive1439 {
       width: 500px;
       height: 545px;
       left: -160px;
-      bottom: -38px;
+      bottom: -8px;
     }
 
     @include responsive1199 {
       width: 410px;
       height: 457px;
-      left: -130px;
-      bottom: -38px;
+      left: -140px;
+      bottom: 12px;
     }
 
     @include responsive1023 {
       width: 320px;
       height: 377px;
-      left: -120px;
-      bottom: -38px;
+      left: -110px;
+      bottom: 2px;
     }
 
     @include responsive767 {
       width: 192px;
       height: 211px;
       left: -40px;
-      bottom: -11px;
+      bottom: -1px;
     }
 
     @include responsive389 {
       left: -50px;
-      bottom: -17px;
+      bottom: 3px;
     }
   }
 
@@ -2914,6 +2914,75 @@
       transform: initial;
       padding-top: calc(288 / 350 * 100%);
       z-index: -1;
+    }
+  }
+
+  &.brand-5-catalog--bigpicture {
+    .container {
+      @include responsive767 {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 32px;
+      }
+    }
+
+    .brand-5-catalog__inner {
+      @include responsive1799 {
+        max-width: 680px;
+      }
+
+      @include responsive1549 {
+        max-width: 620px;
+      }
+
+      @include responsive1439 {
+        max-width: 550px;
+      }
+
+      @include responsive1199 {
+        max-width: 450px;
+      }
+
+      @include responsive767 {
+        max-width: 100%;
+      }
+    }
+
+    .picture-block {
+      width: 805px;
+      height: 917px;
+      left: -120px;
+      top: calc(50% + 75px);
+
+      @include responsive1699 {
+        width: 600px;
+        left: 0;
+      }
+
+      @include responsive1439 {
+        width: 550px;
+      }
+
+      @include responsive1199 {
+        width: 430px;
+      }
+
+      @include responsive1023 {
+        width: 380px;
+        height: 450px;
+        top: calc(100% - 95px);
+        left: -70px;
+      }
+
+      @include responsive767 {
+        position: relative;
+        height: auto;
+        width: 100%;
+        left: -70px;
+        top: 0;
+        padding-top: calc(350 / 350 * 100%);
+        z-index: -1;
+      }
     }
   }
 }

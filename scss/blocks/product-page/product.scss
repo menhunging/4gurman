@@ -302,7 +302,7 @@
     @include responsive1199 {
       font-size: 14px;
       line-height: 18px;
-      padding: 10px 0;
+      padding: 10px 15px 10px 0;
     }
 
     &.opened {
@@ -418,18 +418,41 @@
   }
 
   .picture-block {
-    width: 75px;
-    height: 75px;
     position: relative;
+    border: solid 1px $colorDark;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 14px 20px;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+    width: auto;
+    height: auto;
+    display: flex;
 
     @include responsive1549 {
-      width: 66px;
-      height: 66px;
+      padding: 7px 20px;
+      font-size: 18px;
+      line-height: 24px;
+      min-width: 130px;
+      text-align: center;
+      justify-content: center;
     }
 
     @include responsive1199 {
-      width: 55px;
-      height: 55px;
+      min-width: 100px;
+      padding: 4px 10px;
+      font-size: 15px;
+    }
+
+    &.active {
+      background-color: $colorDark;
+      color: $colorWhite;
+    }
+
+    @include hover {
+      background-color: $colorDark;
+      color: $colorWhite;
     }
 
     picture {
@@ -446,32 +469,6 @@
       height: 70%;
     }
 
-    @include after {
-      content: attr(data-title);
-      position: relative;
-      left: 0;
-      top: 0;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 15px;
-      color: #525151;
-      background-color: $colorWhite;
-      border-radius: 20px;
-      width: 100%;
-      text-align: center;
-      display: block;
-      margin-top: 5px;
-
-      @include responsive1549 {
-        font-size: 11px;
-      }
-
-      @include responsive1199 {
-        font-size: 10px;
-        line-height: 13px;
-      }
-    }
-
     @include hover {
       z-index: 3;
     }
@@ -485,43 +482,81 @@
     gap: 60px 16px;
 
     @include responsive1549 {
-      gap: 50px 16px;
+      gap: 20px;
     }
 
     @include responsive1199 {
       margin-top: 16px;
     }
 
+    @include responsive1023 {
+      gap: 15px 12px;
+    }
+
     li {
+      cursor: pointer;
       position: relative;
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: solid 1px $colorBlack;
-      transition: border 0.3s;
-      width: 75px;
-      height: 75px;
+
+      &.active {
+        background-color: $colorBlack;
+        color: $colorWhite;
+      }
+
+      a:not(.picture-block),
+      span:not(.picture-block) {
+        position: relative;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: solid 1px $colorBlack;
+        transition: border 0.3s;
+        width: 75px;
+        height: 75px;
+
+        @include responsive1199 {
+          font-size: 18px;
+          line-height: 22px;
+          width: 65px;
+          height: 65px;
+        }
+
+        @include responsive1023 {
+          width: 55px;
+          height: 55px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        @include responsive767 {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      a {
+        @include hover {
+          border-color: $colorRed;
+        }
+      }
+
+      span {
+        background-color: #525151;
+        color: $colorWhite;
+        transform: scale(1.15);
+      }
 
       @include responsive1549 {
-        width: 66px;
-        height: 66px;
         font-size: 20px;
         line-height: 24px;
       }
 
       @include responsive1199 {
-        width: 55px;
-        height: 55px;
-        font-size: 18px;
-        line-height: 20px;
-      }
-
-      @include hover {
-        border-color: $colorRed;
+        font-size: 16px;
+        line-height: 18px;
       }
 
       &.flavor-options__more {
@@ -533,7 +568,9 @@
         background-repeat: no-repeat;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17.5984 7.72V10.28H10.4784V17.4H7.91844V10.28H0.798438V7.72H7.91844V0.6H10.4784V7.72H17.5984Z' fill='%23525151'/%3e%3c/svg%3e ");
         text-decoration-skip-ink: none;
-        transition: transform 0.3s, text-decoration 0.3s;
+        transition:
+          transform 0.3s,
+          text-decoration 0.3s;
 
         &.hide {
         }

@@ -1,7 +1,7 @@
 .contacts-main {
   position: relative;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 36px;
   letter-spacing: 0.02em;
   background-color: #c4c4c3;
@@ -14,7 +14,7 @@
 
   @include responsive1199 {
     font-size: 16px;
-    line-height: 20px;
+ line-height: 26px;
   }
 
   @include responsive1023 {

@@ -10,11 +10,6 @@
     line-height: 18px;
   }
 
-  @include responsive767 {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
   .catalog-category__line {
     position: relative;
     padding: 70px 0;
